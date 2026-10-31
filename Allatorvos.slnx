@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Allatorvos.vcxproj" />
+  <Project Path="Allatorvos.vcxproj" Id="8f49ced8-b307-42b1-9081-347dfae1cb23" />
 </Solution>

@@ -19,7 +19,7 @@ typedef struct kezeles {
 typedef struct allat {
 	char nev[20];
 	char faj[20];
-	datum oltas;
+	datumTipus oltas;
 	kezeles* kezelesek;
 	strut allat* kov;
 }allat;
