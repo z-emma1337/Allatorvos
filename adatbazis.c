@@ -18,6 +18,7 @@ gazdi* ujGazdi(nevTipus nev, int telefon[]){ //pointer "láncszem"
 	return uj;
 }
 
+
 allat* ujAllat(char nev[], char faj[], datumTipus oltas) {
 	allat* uj = (allat*)malloc(sizeof(allat));
 	strcpy(uj->nev, nev);
@@ -38,6 +39,8 @@ kezeles* ujKez(datumTipus datum, char leiras[]) {
 	return uj;
 }
 
+
+
 datumTipus str_to_datum(char str[]) {
 	datumTipus datum;
 	sscanf(str,"%d.%d.%d", &datum.ev, &datum.honap, &datum.nap);
@@ -51,16 +54,34 @@ nevTipus str_to_nev(char str[]) {
 }
 
 void fajlBe(char fajlnev[]) {
-	fajl = fopen(fajlnev, "r");
-	char sor[256];
+	FILE* fajl = fopen(fajlnev, "r");
+	char adatsor[256];
 	char adatok[5][50];
 	if (fajl == NULL) {
 		printf("Fajlbeolvasas sikertelen.");
 		return;
 	}
-	while (fgets(sor, 256, fajl)) {
-		for (int i = 0; sor[i] != '\0';i++) {
-
+	while (fgets(adatsor, 256, fajl)) {
+		for (int i = 0; int sor = 0; int oszlop = 0; adatsor[i] != '\0';i++) {
+			if (adatsor[i] !=';') {
+				adatok[sor][oszlop] = adatsor[i];
+				oszlop++;
+			}
+			else {
+				adatok[sor][oszlop] = '\0';
+				sor++;
+				oszlop = 0;
+			}
+		}
+		adatok[sor][oszlop] = '\0';
+		if (adatok[0][0] == 'G') {//gazdi
+			gazdi* uj = ujGazdi(str_to_nev(adatok[1]), adatok[2]);
+		}
+		else if (adatok[0][0] == "A") {//állat
+			allat* uj = ujAllat(adatok[1], adatok[2], str_to_datum(adatok[3]));
+		}
+		else {//kezelés
+			kezeles* uj = ujKez(str_to_datum(adatok[1]), adatok[2]);
 		}
 	}
 
