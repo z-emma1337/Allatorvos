@@ -26,7 +26,7 @@ typedef struct allat {
 
 typedef struct gazdi {
 	nevTipus nev;
-	int telefon[11];
+	char telefon[12];
 	Allat* allatok;
 	struct gazdi* kov;
 }gazdi;

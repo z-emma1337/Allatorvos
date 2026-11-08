@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-gazdi* ujGazdi(nevTipus nev, int telefon[]){ //pointer "láncszem"
+gazdi* ujGazdi(nevTipus nev, char telefon[]){ //pointer "láncszem"
 	gazdi* uj = (gazdi*)malloc(sizeof(gazdi)); 
 	if (uj == NULL) {
 		return NULL;
@@ -53,6 +53,18 @@ nevTipus str_to_nev(char str[]) {
 	return nev;
 }
 
+void LL_Gazdi(*gazdi elozo, *gazdi most) {
+	elozo->kov = most;
+}
+
+void LL_Allat(*allat elozo, *allat most) {
+	elozo->kov = most;
+}
+
+void LL_Kez(*kezeles elozo, *kezeles most) {
+	elozo->kov = most;
+}
+
 void fajlBe(char fajlnev[]) {
 	FILE* fajl = fopen(fajlnev, "r");
 	char adatsor[256];
@@ -61,8 +73,15 @@ void fajlBe(char fajlnev[]) {
 		printf("Fajlbeolvasas sikertelen.");
 		return;
 	}
+
+	gazdi* elso = NULL;
+	gazdi* mostG = NULL;
+	allat* mostA = NULL;
+	kezeles* mostK = NULL;
 	while (fgets(adatsor, 256, fajl)) {
-		for (int i = 0; int sor = 0; int oszlop = 0; adatsor[i] != '\0';i++) {
+		int sor = 0;
+		int oszlop = 0;
+		for (int i = 0; adatsor[i] != '\0';i++) {
 			if (adatsor[i] !=';') {
 				adatok[sor][oszlop] = adatsor[i];
 				oszlop++;
@@ -76,12 +95,35 @@ void fajlBe(char fajlnev[]) {
 		adatok[sor][oszlop] = '\0';
 		if (adatok[0][0] == 'G') {//gazdi
 			gazdi* uj = ujGazdi(str_to_nev(adatok[1]), adatok[2]);
+			if (elso == NULL) {
+				elso = uj;
+			}
+			else {
+				LL_Gazdi(mostG, uj);
+			}
+			mostG = uj;
+			mostA = NULL;
 		}
-		else if (adatok[0][0] == "A") {//állat
+		else if (adatok[0][0] == 'A') {//állat
 			allat* uj = ujAllat(adatok[1], adatok[2], str_to_datum(adatok[3]));
+			if (mostG->allatok == NULL) {
+				mostG->allatok = uj;
+			}
+			else {
+				LL_Allat(mostA, uj);
+			}
+			mostA = uj;
+			mostK = NULL;
 		}
 		else {//kezelés
 			kezeles* uj = ujKez(str_to_datum(adatok[1]), adatok[2]);
+			if (mostA->kezelesek == NULL) {
+				mostA->kezelesek = uj;
+			}
+			else {
+				LL_Kez(mostK, uj);
+			}
+			mostK = uj;
 		}
 	}
 
