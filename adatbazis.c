@@ -4,13 +4,13 @@
 #include <stdlib.h>
 #include <string.h>
 
-gazdi* ujGazdi(nevTipus nev, char telefon[]){ //pointer "láncszem"
-	gazdi* uj = (gazdi*)malloc(sizeof(gazdi)); 
+gazdi* ujGazdi(nevTipus nev, char telefon[]) { //pointer "láncszem"
+	gazdi* uj = (gazdi*)malloc(sizeof(gazdi));
 	if (uj == NULL) {
 		return NULL;
 	}
 	uj->nev = nev; //->  "." helyett, mert pointer
-	for (int i = 0; i < 11;i++) {
+	for (int i = 0; i < 11; i++) {
 		uj->telefon[i] = telefon[i];
 	}
 	uj->allatok = NULL;
@@ -44,7 +44,7 @@ kezeles* ujKez(datumTipus datum, char leiras[]) {
 
 datumTipus str_to_datum(char str[]) {
 	datumTipus datum;
-	sscanf(str,"%d.%d.%d", &datum.ev, &datum.honap, &datum.nap);
+	sscanf(str, "%d.%d.%d", &datum.ev, &datum.honap, &datum.nap);
 	return datum;
 }
 
@@ -108,8 +108,8 @@ gazdi* fajlBe(char fajlnev[]) {
 	while (fgets(adatsor, 256, fajl)) {
 		int sor = 0;
 		int oszlop = 0;
-		for (int i = 0; adatsor[i] != '\0';i++) {
-			if (adatsor[i] !=';') {
+		for (int i = 0; adatsor[i] != '\0'; i++) {
+			if (adatsor[i] != ';' && adatsor[i] != '\n') {
 				adatok[sor][oszlop] = adatsor[i];
 				oszlop++;
 			}
@@ -120,6 +120,7 @@ gazdi* fajlBe(char fajlnev[]) {
 			}
 		}
 		adatok[sor][oszlop] = '\0';
+
 		if (adatok[0][0] == 'G') {//gazdi
 			gazdi* uj = ujGazdi(str_to_nev(adatok[1]), adatok[2]);
 			if (elso == NULL) {
@@ -142,7 +143,7 @@ gazdi* fajlBe(char fajlnev[]) {
 			mostA = uj;
 			mostK = NULL;
 		}
-		else {//kezelés
+		else if (adatok[0][0] == 'K') {//kezelés
 			kezeles* uj = ujKez(str_to_datum(adatok[1]), adatok[2]);
 			if (mostA->kezelesek == NULL) {
 				mostA->kezelesek = uj;
