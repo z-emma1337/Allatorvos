@@ -146,6 +146,9 @@
     <ClInclude Include="adatbazis.h" />
     <ClInclude Include="debugmalloc.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="adatok.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

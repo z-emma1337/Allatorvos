@@ -21,12 +21,12 @@ typedef struct allat {
 	char faj[20];
 	datumTipus oltas;
 	kezeles* kezelesek;
-	strut allat* kov;
+	struct allat* kov;
 }allat;
 
 typedef struct gazdi {
 	nevTipus nev;
 	char telefon[12];
-	Allat* allatok;
+	allat* allatok;
 	struct gazdi* kov;
 }gazdi;

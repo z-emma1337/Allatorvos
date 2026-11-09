@@ -1,0 +1,8 @@
+G;Kovacs Janos;06301234567
+A;Bodri;Kutya;2023.10.15
+K;2023.10.15;Vetszeges oltas es fereghajtas
+K;2023.12.01;Fulkullancs ellenorzes
+A;Cirmos;Macska;2022.05.10
+G;Nagy Anna;06209876543
+A;Nemo;Hal;2024.01.01
+K;2024.01.02;Akvarium vizcsere es ellenorzes

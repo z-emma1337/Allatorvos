@@ -36,6 +36,7 @@ kezeles* ujKez(datumTipus datum, char leiras[]) {
 	}
 	uj->datum = datum;
 	strcpy(uj->leiras, leiras);
+	uj->kov = NULL;
 	return uj;
 }
 
@@ -53,25 +54,51 @@ nevTipus str_to_nev(char str[]) {
 	return nev;
 }
 
-void LL_Gazdi(*gazdi elozo, *gazdi most) {
+void LL_Gazdi(gazdi* elozo, gazdi* most) {
 	elozo->kov = most;
 }
 
-void LL_Allat(*allat elozo, *allat most) {
+void LL_Allat(allat* elozo, allat* most) {
 	elozo->kov = most;
 }
 
-void LL_Kez(*kezeles elozo, *kezeles most) {
+void LL_Kez(kezeles* elozo, kezeles* most) {
 	elozo->kov = most;
 }
 
-void fajlBe(char fajlnev[]) {
+void freeK(kezeles* mostK) {
+	while (mostK != NULL) {
+		kezeles* kov = mostK->kov;
+		free(mostK);
+		mostK = kov;
+	}
+}
+
+void freeA(allat* mostA) {
+	while (mostA != NULL) {
+		allat* kov = mostA->kov;
+		freeK(mostA->kezelesek);
+		free(mostA);
+		mostA = kov;
+	}
+}
+
+void freeG(gazdi* mostG) {
+	while (mostG != NULL) {
+		gazdi* kov = mostG->kov;
+		freeA(mostG->allatok);
+		free(mostG);
+		mostG = kov;
+	}
+}
+
+gazdi* fajlBe(char fajlnev[]) {
 	FILE* fajl = fopen(fajlnev, "r");
 	char adatsor[256];
 	char adatok[5][50];
 	if (fajl == NULL) {
 		printf("Fajlbeolvasas sikertelen.");
-		return;
+		return NULL;
 	}
 
 	gazdi* elso = NULL;
@@ -128,4 +155,5 @@ void fajlBe(char fajlnev[]) {
 	}
 
 	fclose(fajl);
+	return elso;
 }
