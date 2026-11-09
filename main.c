@@ -9,6 +9,7 @@ int main() {
 	else {
 		printf("Siker!");
 	}
+
 	freeG(adatok);
 	return 0;
 
