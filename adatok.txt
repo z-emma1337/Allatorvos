@@ -1,8 +1,300 @@
-G;Kovacs Janos;06301234567
-A;Bodri;Kutya;2023.10.15
-K;2023.10.15;Vetszeges oltas es fereghajtas
-K;2023.12.01;Fulkullancs ellenorzes
-A;Cirmos;Macska;2022.05.10
-G;Nagy Anna;06209876543
-A;Nemo;Hal;2024.01.01
-K;2024.01.02;Akvarium vizcsere es ellenorzes
+G;Kovacs Janos;06301000000
+A;Bodri;Kutya;2019.01.01
+K;2024.01.01;Eves vedooltas es altalanos vizsgalat
+K;2025.04.10;Fereghajtas es testsulyellenorzes
+K;2026.07.19;Ful es szem ellenorzese
+A;Cirmi;Macska;2020.06.10
+K;2024.05.08;Fereghajtas es testsulyellenorzes
+K;2025.08.17;Ful es szem ellenorzese
+K;2026.11.26;Fogko ellenorzes es szajapolas
+G;Nagy Anna;06501000001
+A;Morzsi;Kutya;2020.04.08
+K;2025.03.06;Fereghajtas es testsulyellenorzes
+K;2026.06.15;Ful es szem ellenorzese
+K;2024.09.24;Fogko ellenorzes es szajapolas
+A;Luna;Macska;2021.09.17
+K;2025.07.13;Ful es szem ellenorzese
+K;2026.10.22;Fogko ellenorzes es szajapolas
+K;2024.01.04;Boratvizsgalat es kullancs elleni kezeles
+G;Toth Peter;06701000002
+A;Zokni;Macska;2021.07.15
+K;2026.05.11;Ful es szem ellenorzese
+K;2024.08.20;Fogko ellenorzes es szajapolas
+K;2025.11.02;Boratvizsgalat es kullancs elleni kezeles
+A;Rex;Kutya;2022.12.24
+K;2026.09.18;Fogko ellenorzes es szajapolas
+K;2024.12.27;Boratvizsgalat es kullancs elleni kezeles
+K;2025.03.09;Kontrollvizsgalat es allapotfelmeres
+G;Szabo Eszter;06901000003
+A;Misu;Macska;2022.10.22
+K;2024.07.16;Fogko ellenorzes es szajapolas
+K;2025.10.25;Boratvizsgalat es kullancs elleni kezeles
+K;2026.01.07;Kontrollvizsgalat es allapotfelmeres
+A;Buksi;Kutya;2023.03.04
+K;2024.11.23;Boratvizsgalat es kullancs elleni kezeles
+K;2025.02.05;Kontrollvizsgalat es allapotfelmeres
+K;2026.05.14;Vitaminpotlas es taplalasi tanacsadas
+G;Horvath Mate;06301000004
+A;Molly;Kutya;2023.01.02
+K;2025.09.21;Boratvizsgalat es kullancs elleni kezeles
+K;2026.12.03;Kontrollvizsgalat es allapotfelmeres
+K;2024.03.12;Vitaminpotlas es taplalasi tanacsadas
+A;Pixel;Macska;2024.06.11
+K;2025.01.01;Kontrollvizsgalat es allapotfelmeres
+K;2026.04.10;Vitaminpotlas es taplalasi tanacsadas
+K;2024.07.19;Mancs es karmok ellenorzese
+G;Varga Lilla;06501000005
+A;Pamacs;Nyul;2024.04.09
+K;2026.11.26;Kontrollvizsgalat es allapotfelmeres
+K;2024.02.08;Vitaminpotlas es taplalasi tanacsadas
+K;2025.05.17;Mancs es karmok ellenorzese
+A;Foltos;Kutya;2025.09.18
+K;2026.03.06;Vitaminpotlas es taplalasi tanacsadas
+K;2024.06.15;Mancs es karmok ellenorzese
+K;2025.09.24;Oltasi konyv ellenorzese
+G;Kiss Bence;06701000006
+A;Mici;Macska;2025.07.16
+K;2024.01.04;Vitaminpotlas es taplalasi tanacsadas
+K;2025.04.13;Mancs es karmok ellenorzese
+K;2026.07.22;Oltasi konyv ellenorzese
+A;Tappancs;Kutya;2019.12.25
+K;2024.05.11;Mancs es karmok ellenorzese
+K;2025.08.20;Oltasi konyv ellenorzese
+K;2026.11.02;Allergias tunetek vizsgalata
+G;Molnar Reka;06901000007
+A;Nala;Macska;2019.10.23
+K;2025.03.09;Mancs es karmok ellenorzese
+K;2026.06.18;Oltasi konyv ellenorzese
+K;2024.09.27;Allergias tunetek vizsgalata
+A;Max;Kutya;2020.03.05
+K;2025.07.16;Oltasi konyv ellenorzese
+K;2026.10.25;Allergias tunetek vizsgalata
+K;2024.01.07;Eves vedooltas es altalanos vizsgalat
+G;Nemeth David;06301000008
+A;Keksz;Nyul;2020.01.03
+K;2026.05.14;Oltasi konyv ellenorzese
+K;2024.08.23;Allergias tunetek vizsgalata
+K;2025.11.05;Eves vedooltas es altalanos vizsgalat
+A;Felix;Macska;2021.06.12
+K;2026.09.21;Allergias tunetek vizsgalata
+K;2024.12.03;Eves vedooltas es altalanos vizsgalat
+K;2025.03.12;Fereghajtas es testsulyellenorzes
+G;Farkas Zsofia;06501000009
+A;Daisy;Kutya;2021.04.10
+K;2024.07.19;Allergias tunetek vizsgalata
+K;2025.10.01;Eves vedooltas es altalanos vizsgalat
+K;2026.01.10;Fereghajtas es testsulyellenorzes
+A;Coco;Macska;2022.09.19
+K;2024.11.26;Eves vedooltas es altalanos vizsgalat
+K;2025.02.08;Fereghajtas es testsulyellenorzes
+K;2026.05.17;Ful es szem ellenorzese
+G;Balogh Adam;06701000010
+A;Csoki;Kutya;2022.07.17
+K;2025.09.24;Eves vedooltas es altalanos vizsgalat
+K;2026.12.06;Fereghajtas es testsulyellenorzes
+K;2024.03.15;Ful es szem ellenorzese
+A;Pihe;Nyul;2023.12.26
+K;2025.01.04;Fereghajtas es testsulyellenorzes
+K;2026.04.13;Ful es szem ellenorzese
+K;2024.07.22;Fogko ellenorzes es szajapolas
+G;Papp Dora;06901000011
+A;Mango;Papagaj;2023.10.24
+K;2026.11.02;Fereghajtas es testsulyellenorzes
+K;2024.02.11;Ful es szem ellenorzese
+K;2025.05.20;Fogko ellenorzes es szajapolas
+A;Bogyó;Macska;2024.03.06
+K;2026.03.09;Ful es szem ellenorzese
+K;2024.06.18;Fogko ellenorzes es szajapolas
+K;2025.09.27;Boratvizsgalat es kullancs elleni kezeles
+G;Lakatos Mark;06301000012
+A;Brúnó;Kutya;2024.01.04
+K;2024.01.07;Ful es szem ellenorzese
+K;2025.04.16;Fogko ellenorzes es szajapolas
+K;2026.07.25;Boratvizsgalat es kullancs elleni kezeles
+A;Mázli;Kutya;2025.06.13
+K;2024.05.14;Fogko ellenorzes es szajapolas
+K;2025.08.23;Boratvizsgalat es kullancs elleni kezeles
+K;2026.11.05;Kontrollvizsgalat es allapotfelmeres
+G;Takacs Nora;06501000013
+A;Süti;Macska;2025.04.11
+K;2025.03.12;Fogko ellenorzes es szajapolas
+K;2026.06.21;Boratvizsgalat es kullancs elleni kezeles
+K;2024.09.03;Kontrollvizsgalat es allapotfelmeres
+A;Kormi;Macska;2019.09.20
+K;2025.07.19;Boratvizsgalat es kullancs elleni kezeles
+K;2026.10.01;Kontrollvizsgalat es allapotfelmeres
+K;2024.01.10;Vitaminpotlas es taplalasi tanacsadas
+G;Juhasz Levente;06701000014
+A;Tücsök;Nyul;2019.07.18
+K;2026.05.17;Boratvizsgalat es kullancs elleni kezeles
+K;2024.08.26;Kontrollvizsgalat es allapotfelmeres
+K;2025.11.08;Vitaminpotlas es taplalasi tanacsadas
+A;Zsömle;Kutya;2020.12.27
+K;2026.09.24;Kontrollvizsgalat es allapotfelmeres
+K;2024.12.06;Vitaminpotlas es taplalasi tanacsadas
+K;2025.03.15;Mancs es karmok ellenorzese
+G;Kerek Mira;06901000015
+A;Pötyi;Macska;2020.10.25
+K;2024.07.22;Kontrollvizsgalat es allapotfelmeres
+K;2025.10.04;Vitaminpotlas es taplalasi tanacsadas
+K;2026.01.13;Mancs es karmok ellenorzese
+A;Mokka;Kutya;2021.03.07
+K;2024.11.02;Vitaminpotlas es taplalasi tanacsadas
+K;2025.02.11;Mancs es karmok ellenorzese
+K;2026.05.20;Oltasi konyv ellenorzese
+G;Mészáros Luca;06301000016
+A;Bambi;Macska;2021.01.05
+K;2025.09.27;Vitaminpotlas es taplalasi tanacsadas
+K;2026.12.09;Mancs es karmok ellenorzese
+K;2024.03.18;Oltasi konyv ellenorzese
+A;Dió;Nyul;2022.06.14
+K;2025.01.07;Mancs es karmok ellenorzese
+K;2026.04.16;Oltasi konyv ellenorzese
+K;2024.07.25;Allergias tunetek vizsgalata
+G;Simon Gergő;06501000017
+A;Zizi;Papagaj;2022.04.12
+K;2026.11.05;Mancs es karmok ellenorzese
+K;2024.02.14;Oltasi konyv ellenorzese
+K;2025.05.23;Allergias tunetek vizsgalata
+A;Csipesz;Macska;2023.09.21
+K;2026.03.12;Oltasi konyv ellenorzese
+K;2024.06.21;Allergias tunetek vizsgalata
+K;2025.09.03;Eves vedooltas es altalanos vizsgalat
+G;Rácz Petra;06701000018
+A;Loki;Kutya;2023.07.19
+K;2024.01.10;Oltasi konyv ellenorzese
+K;2025.04.19;Allergias tunetek vizsgalata
+K;2026.07.01;Eves vedooltas es altalanos vizsgalat
+A;Muffin;Macska;2024.12.01
+K;2024.05.17;Allergias tunetek vizsgalata
+K;2025.08.26;Eves vedooltas es altalanos vizsgalat
+K;2026.11.08;Fereghajtas es testsulyellenorzes
+G;Fekete Áron;06901000019
+A;Kifli;Nyul;2024.10.26
+K;2025.03.15;Allergias tunetek vizsgalata
+K;2026.06.24;Eves vedooltas es altalanos vizsgalat
+K;2024.09.06;Fereghajtas es testsulyellenorzes
+A;Panka;Kutya;2025.03.08
+K;2025.07.22;Eves vedooltas es altalanos vizsgalat
+K;2026.10.04;Fereghajtas es testsulyellenorzes
+K;2024.01.13;Ful es szem ellenorzese
+G;Oláh Hanna;06301000020
+A;Samu;Macska;2025.01.06
+K;2026.05.20;Eves vedooltas es altalanos vizsgalat
+K;2024.08.02;Fereghajtas es testsulyellenorzes
+K;2025.11.11;Ful es szem ellenorzese
+A;Borsó;Nyul;2019.06.15
+K;2026.09.27;Fereghajtas es testsulyellenorzes
+K;2024.12.09;Ful es szem ellenorzese
+K;2025.03.18;Fogko ellenorzes es szajapolas
+G;Pál Zalán;06501000021
+A;Nokedli;Kutya;2019.04.13
+K;2024.07.25;Fereghajtas es testsulyellenorzes
+K;2025.10.07;Ful es szem ellenorzese
+K;2026.01.16;Fogko ellenorzes es szajapolas
+A;Mák;Macska;2020.09.22
+K;2024.11.05;Ful es szem ellenorzese
+K;2025.02.14;Fogko ellenorzes es szajapolas
+K;2026.05.23;Boratvizsgalat es kullancs elleni kezeles
+G;Gál Lili;06701000022
+A;Teddy;Kutya;2020.07.20
+K;2025.09.03;Ful es szem ellenorzese
+K;2026.12.12;Fogko ellenorzes es szajapolas
+K;2024.03.21;Boratvizsgalat es kullancs elleni kezeles
+A;Pötty;Macska;2021.12.02
+K;2025.01.10;Fogko ellenorzes es szajapolas
+K;2026.04.19;Boratvizsgalat es kullancs elleni kezeles
+K;2024.07.01;Kontrollvizsgalat es allapotfelmeres
+G;Kocsis Márk;06901000023
+A;Kókusz;Papagaj;2021.10.27
+K;2026.11.08;Fogko ellenorzes es szajapolas
+K;2024.02.17;Boratvizsgalat es kullancs elleni kezeles
+K;2025.05.26;Kontrollvizsgalat es allapotfelmeres
+A;Ropi;Kutya;2022.03.09
+K;2026.03.15;Boratvizsgalat es kullancs elleni kezeles
+K;2024.06.24;Kontrollvizsgalat es allapotfelmeres
+K;2025.09.06;Vitaminpotlas es taplalasi tanacsadas
+G;Sándor Nóra;06301000024
+A;Mimi;Macska;2022.01.07
+K;2024.01.13;Boratvizsgalat es kullancs elleni kezeles
+K;2025.04.22;Kontrollvizsgalat es allapotfelmeres
+K;2026.07.04;Vitaminpotlas es taplalasi tanacsadas
+A;Zserbó;Kutya;2023.06.16
+K;2024.05.20;Kontrollvizsgalat es allapotfelmeres
+K;2025.08.02;Vitaminpotlas es taplalasi tanacsadas
+K;2026.11.11;Mancs es karmok ellenorzese
+G;Fodor Dániel;06501000025
+A;Hógolyó;Nyul;2023.04.14
+K;2025.03.18;Kontrollvizsgalat es allapotfelmeres
+K;2026.06.27;Vitaminpotlas es taplalasi tanacsadas
+K;2024.09.09;Mancs es karmok ellenorzese
+A;Kira;Kutya;2024.09.23
+K;2025.07.25;Vitaminpotlas es taplalasi tanacsadas
+K;2026.10.07;Mancs es karmok ellenorzese
+K;2024.01.16;Oltasi konyv ellenorzese
+G;Bíró Jázmin;06701000026
+A;Szikra;Macska;2024.07.21
+K;2026.05.23;Vitaminpotlas es taplalasi tanacsadas
+K;2024.08.05;Mancs es karmok ellenorzese
+K;2025.11.14;Oltasi konyv ellenorzese
+A;Csillag;Papagaj;2025.12.03
+K;2026.09.03;Mancs es karmok ellenorzese
+K;2024.12.12;Oltasi konyv ellenorzese
+K;2025.03.21;Allergias tunetek vizsgalata
+G;Barta Máté;06901000027
+A;Morzsa;Kutya;2025.10.01
+K;2024.07.01;Mancs es karmok ellenorzese
+K;2025.10.10;Oltasi konyv ellenorzese
+K;2026.01.19;Allergias tunetek vizsgalata
+A;Puding;Macska;2019.03.10
+K;2024.11.08;Oltasi konyv ellenorzese
+K;2025.02.17;Allergias tunetek vizsgalata
+K;2026.05.26;Eves vedooltas es altalanos vizsgalat
+G;Vincze Emma;06301000028
+A;Buborék;Hal;2019.01.08
+K;2025.09.06;Oltasi konyv ellenorzese
+K;2026.12.15;Allergias tunetek vizsgalata
+K;2024.03.24;Eves vedooltas es altalanos vizsgalat
+A;Nemo;Hal;2020.06.17
+K;2025.01.13;Allergias tunetek vizsgalata
+K;2026.04.22;Eves vedooltas es altalanos vizsgalat
+K;2024.07.04;Fereghajtas es testsulyellenorzes
+G;Somogyi Zétény;06501000029
+A;Ariel;Hal;2020.04.15
+K;2026.11.11;Allergias tunetek vizsgalata
+K;2024.02.20;Eves vedooltas es altalanos vizsgalat
+K;2025.05.02;Fereghajtas es testsulyellenorzes
+A;Gombóc;Macska;2021.09.24
+K;2026.03.18;Eves vedooltas es altalanos vizsgalat
+K;2024.06.27;Fereghajtas es testsulyellenorzes
+K;2025.09.09;Ful es szem ellenorzese
+G;Fülöp Léna;06701000030
+A;Szőrmók;Kutya;2021.07.22
+K;2024.01.16;Eves vedooltas es altalanos vizsgalat
+K;2025.04.25;Fereghajtas es testsulyellenorzes
+K;2026.07.07;Ful es szem ellenorzese
+A;Tigris;Macska;2022.12.04
+K;2024.05.23;Fereghajtas es testsulyellenorzes
+K;2025.08.05;Ful es szem ellenorzese
+K;2026.11.14;Fogko ellenorzes es szajapolas
+G;Kelemen Ádám;06901000031
+A;Lencse;Nyul;2022.10.02
+K;2025.03.21;Fereghajtas es testsulyellenorzes
+K;2026.06.03;Ful es szem ellenorzese
+K;2024.09.12;Fogko ellenorzes es szajapolas
+A;Füge;Macska;2023.03.11
+K;2025.07.01;Ful es szem ellenorzese
+K;2026.10.10;Fogko ellenorzes es szajapolas
+K;2024.01.19;Boratvizsgalat es kullancs elleni kezeles
+G;Antal Flóra;06301000032
+A;Zafír;Papagaj;2023.01.09
+K;2026.05.26;Ful es szem ellenorzese
+K;2024.08.08;Fogko ellenorzes es szajapolas
+K;2025.11.17;Boratvizsgalat es kullancs elleni kezeles
+A;Kavics;Teknős;2024.06.18
+K;2026.09.06;Fogko ellenorzes es szajapolas
+K;2024.12.15;Boratvizsgalat es kullancs elleni kezeles
+K;2025.03.24;Kontrollvizsgalat es allapotfelmeres
+K;2026.10.12;Boratvizsgalat es kullancs elleni kezeles
+K;2026.11.13;Kontrollvizsgalat es allapotfelmeres
+K;2026.12.14;Vitaminpotlas es taplalasi tanacsadas
