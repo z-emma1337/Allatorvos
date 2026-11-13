@@ -17,9 +17,6 @@ int main() {
     int menu = 0;
 
     while (b != 27) {
-        system("cls");
-
-        printf("/// MENU ///\n");
 
         if (menu == 0)
             printf("  > Kereses\n");
