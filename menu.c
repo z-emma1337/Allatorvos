@@ -1,73 +1,125 @@
 #include "debugmalloc.h"
-#include "conio.h"
-#include "menu.h"
+#include "adatbazis.h"
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
 
-menu* menu_init() {
-	menu* M = malloc(6 * sizeof(menu));
-	M[0] = (menu){ 0,-1,"Kereses" };
-	M[1] = (menu){ 1,-1,"Lista" };
-	M[2] = (menu){ 0,0,"Gazdi" };
-	M[3] = (menu){ 1,0,"Allat" };
-	M[4] = (menu){ 2,0,"Kezeles" };
-	M[5] = (menu){ -1, -1, NULL };
+char* kisbetus(char szoveg[]) {
+	char* re = malloc(strlen(szoveg) + 1);
+	for (int i = 0; szoveg[i] != '\0';i++) {
+		re[i] = tolower(szoveg[i]);
+	}
+	re[strlen(szoveg)] = '\0';
 
-	return M;
+	return re;
 }
 
-void MenuKiir(int szint, int kiv, menu* M) {
-	char* cur = " >";
-	system("cls");
-	printf("/// MENU ///\n");
-	for (int i = 0; M[i].Menupont != NULL && M[i].elozoIndex == szint - 1; i++) {
-		if (kiv == M[i].index) {
-			printf("   %s%s", cur, M[i].Menupont);
+void clear() {
+	printf("\033[H\033[J");
+}
+
+void keresett_g(char* ker, gazdi* adatok) {
+	clear();
+	printf("/// TALALATOK %s ///\n", ker);
+	ker = kisbetus(ker);
+	while (adatok != NULL) {
+		char* kereszt = kisbetus(adatok->nev.kereszt);
+		char* vezetek = kisbetus(adatok->nev.vezetek);
+		if (strstr(kereszt, ker) != NULL || strstr(vezetek, ker) != NULL) {
+			printf("Nev: %s %s\n", adatok->nev.vezetek, adatok->nev.kereszt);
+			printf("Telefonszam: %s\n", adatok->telefon);
+			printf("Allatok:\n");
+
+			allat* mostAllatok = adatok->allatok;
+			while (mostAllatok != NULL) {
+				printf("\t%s\n", mostAllatok->nev);
+				mostAllatok = mostAllatok->kov;
+			}
+
 		}
-		else {
-			printf("   %s", M[i].Menupont);
+		adatok = adatok->kov;
+		free(kereszt);
+		free(vezetek);
+	}
+	free(ker);
+
+	printf("\nNyomj Entert a visszalepeshez...");
+	getchar();
+}
+
+void gazdi_kereses(gazdi* adatok) {
+	clear();
+	char ker[50];
+	while (1) {
+		printf("/// Gazdi Kereses MENU ///\n");
+		printf("    [0] Kilepes\n");
+		printf("    Kereses: ");
+		scanf("%s", ker);
+		if (strcmp(ker, "0") == 0) {
+			break;
+		}
+		keresett_g(ker, adatok);
+
+
+
+	}
+}
+
+void kereses_menu(gazdi* adatok) {
+	int kiv = -1;
+	while (kiv != '0') {
+		printf("/// Kereses MENU ///\n");
+		printf("    [1] Gazdi\n");
+		printf("    [2] Allat\n");
+		printf("    [3] Kezeles\n");
+		printf("    [0] Kilepes\n");
+		printf("    Valasztas: ");
+		kiv = getchar();
+		switch (kiv) {
+		case '1':
+			gazdi_kereses(adatok);
+			break;
+		case '2':
+			//
+			break;
+		case '3':
+			//
+			break;
+		case '0':
+				break;
+
+			default:
+				printf("Hiba! A menupont szamat valaszd!");
 		}
 	}
 }
 
-void Inditas() {
-	menu* M = menu_init();
-	int b = 0;
-	int szint = 0;
-	int kiv = 0;
-	MenuKiir(szint, kiv, M);
+void menu_init(gazdi* adatok) {
+	int kiv = -1;
+	while (kiv != '0') {
+		printf("/// ALLATORVOS MENU ///\n");
+		printf("    [1] Kereses\n");
+		printf("    [2] Lista\n");
+		printf("    [0] Kilepes\n");
+		printf("    Valasztas: ");
+		kiv = getchar();
+		switch (kiv) {
+		case '1':
+			kereses_menu(adatok);
+			break;
+		case '2':
+			break;
+		case '0':
+			break;
+		default:
+			printf("Hiba! A menupont szamat valaszd!");
+		}
+	}
 
-	while (b != 27) {
-		b = _getch();
-		if (b == 224) {
-			b = _getch();
-			if (b == 72) { //fel
-				if (kiv > 0) kiv--;
-			}
-			else if (b == 80) {//le
-				if (kiv < 1) kiv++;
-			}
 
-		}
-		else if (b == 13) {//enter !!le kell kezelni mert ez már lehet függvényt hív!!
-			if (szint < 0) {
-				szint++;
-				kiv = 0;
-			}
-		}
-		else if (b == 8) { //backspace
-			if (szint > 0) {
-				szint--;
-				kiv = 0;
-			}
-		}
-		MenuKiir(szint, kiv, M);
-	}
-	printf("   >Kilépés");
-	b = _getch();
-	if (b == 13) { //double check kilepes
-		free(M);
-	}
-	else if (b == 8) {
-		Inditas();
-	}
+
+
+
+
 }
 

@@ -13,6 +13,7 @@ gazdi* ujGazdi(nevTipus nev, char telefon[]) { //pointer "láncszem"
 	for (int i = 0; i < 11; i++) {
 		uj->telefon[i] = telefon[i];
 	}
+	uj->telefon[11] = '\0';
 	uj->allatok = NULL;
 	uj->kov = NULL;
 	return uj;

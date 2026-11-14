@@ -1,9 +1,5 @@
 #include "debugmalloc.h"
 #include "adatbazis.h"
-#include "menu.h"
-#include "stdio.h"
-#include "conio.h"
-#include "stdlib.h"
 
 int main() {
     gazdi* adatok = fajlBe("adatok.txt");
@@ -13,7 +9,7 @@ int main() {
         freeG(adatok);
         return 0;
     }
-   
+    menu_init(adatok);
 
     freeG(adatok);
     return 0;
