@@ -14,27 +14,30 @@ char* kisbetus(char szoveg[]) {
 	return re;
 }
 
+
 void clear() {
 	printf("\033[H\033[J");
 }
 
 void keresett_g(char* ker, gazdi* adatok) {
 	clear();
-	printf("/// TALALATOK %s ///\n", ker);
+	printf("/// TALALATOK %s /// [ENTER] Visszateres\n", ker);
 	ker = kisbetus(ker);
 	while (adatok != NULL) {
 		char* kereszt = kisbetus(adatok->nev.kereszt);
 		char* vezetek = kisbetus(adatok->nev.vezetek);
 		if (strstr(kereszt, ker) != NULL || strstr(vezetek, ker) != NULL) {
+			printf("------------------------\n");
 			printf("Nev: %s %s\n", adatok->nev.vezetek, adatok->nev.kereszt);
 			printf("Telefonszam: %s\n", adatok->telefon);
-			printf("Allatok:\n");
-
 			allat* mostAllatok = adatok->allatok;
+			printf("Allatok:%s",mostAllatok->nev);
+			mostAllatok = mostAllatok->kov;
 			while (mostAllatok != NULL) {
-				printf("\t%s\n", mostAllatok->nev);
+				printf("\n\t%s", mostAllatok->nev);
 				mostAllatok = mostAllatok->kov;
 			}
+			printf("\n");
 
 		}
 		adatok = adatok->kov;
@@ -42,15 +45,16 @@ void keresett_g(char* ker, gazdi* adatok) {
 		free(vezetek);
 	}
 	free(ker);
-
-	printf("\nNyomj Entert a visszalepeshez...");
+	printf("------------------------\n");
+	printf("[ENTER] Visszateres");
+	getchar();
 	getchar();
 }
 
 void gazdi_kereses(gazdi* adatok) {
-	clear();
 	char ker[50];
 	while (1) {
+		clear();
 		printf("/// Gazdi Kereses MENU ///\n");
 		printf("    [0] Kilepes\n");
 		printf("    Kereses: ");
@@ -68,13 +72,17 @@ void gazdi_kereses(gazdi* adatok) {
 void kereses_menu(gazdi* adatok) {
 	int kiv = -1;
 	while (kiv != '0') {
+		clear();
 		printf("/// Kereses MENU ///\n");
 		printf("    [1] Gazdi\n");
 		printf("    [2] Allat\n");
 		printf("    [3] Kezeles\n");
 		printf("    [0] Kilepes\n");
 		printf("    Valasztas: ");
-		kiv = getchar();
+		do {
+			kiv = getchar();
+
+		} while (kiv == '\n');
 		switch (kiv) {
 		case '1':
 			gazdi_kereses(adatok);
@@ -86,8 +94,7 @@ void kereses_menu(gazdi* adatok) {
 			//
 			break;
 		case '0':
-				break;
-
+			break;
 			default:
 				printf("Hiba! A menupont szamat valaszd!");
 		}
@@ -97,12 +104,16 @@ void kereses_menu(gazdi* adatok) {
 void menu_init(gazdi* adatok) {
 	int kiv = -1;
 	while (kiv != '0') {
+		clear();
 		printf("/// ALLATORVOS MENU ///\n");
 		printf("    [1] Kereses\n");
 		printf("    [2] Lista\n");
 		printf("    [0] Kilepes\n");
 		printf("    Valasztas: ");
-		kiv = getchar();
+		do {
+			kiv = getchar();
+
+		} while (kiv == '\n');
 		switch (kiv) {
 		case '1':
 			kereses_menu(adatok);
