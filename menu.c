@@ -5,7 +5,6 @@
 #include <ctype.h>
 #include <string.h>
 // visszaad egy lefoglalt méretű karakter pointert csupa kisbetűkkel a nagybetűs hibák elkerülése érdekében
-// a paraméter hossza+1 méretű a terület a lezáró karakter miatt
 char* kisbetus(char szoveg[]) {
 	char* re = malloc(strlen(szoveg) + 1);
 	if (re == NULL) {
