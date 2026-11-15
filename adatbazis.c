@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+//Megfelelő paraméterekkel létrehoz egy új gazdi típusu pointert amit utána vissza is ad
 gazdi* ujGazdi(nevTipus nev, char telefon[]) { //pointer "láncszem"
 	gazdi* uj = (gazdi*)malloc(sizeof(gazdi));
 	if (uj == NULL) {
@@ -22,6 +22,9 @@ gazdi* ujGazdi(nevTipus nev, char telefon[]) { //pointer "láncszem"
 
 allat* ujAllat(char nev[], char faj[], datumTipus oltas) {
 	allat* uj = (allat*)malloc(sizeof(allat));
+	if (uj == NULL) {
+		return NULL;
+	}
 	strcpy(uj->nev, nev);
 	strcpy(uj->faj, faj);
 	uj->oltas = oltas;
@@ -41,20 +44,21 @@ kezeles* ujKez(datumTipus datum, char leiras[]) {
 	return uj;
 }
 
-
-
+//szövegből dátumtípust csinál
 datumTipus str_to_datum(char str[]) {
 	datumTipus datum;
 	sscanf(str, "%d.%d.%d", &datum.ev, &datum.honap, &datum.nap);
 	return datum;
 }
 
+//szövegből névtípust csinál
 nevTipus str_to_nev(char str[]) {
 	nevTipus nev;
 	sscanf(str, "%s %s", nev.vezetek, nev.kereszt);
 	return nev;
 }
 
+//összekötő függvények (láncolt lista)
 void LL_Gazdi(gazdi* elozo, gazdi* most) {
 	elozo->kov = most;
 }
@@ -67,6 +71,7 @@ void LL_Kez(kezeles* elozo, kezeles* most) {
 	elozo->kov = most;
 }
 
+//felszabadító függvények, a freeG meghívja az összeset
 void freeK(kezeles* mostK) {
 	while (mostK != NULL) {
 		kezeles* kov = mostK->kov;
@@ -92,7 +97,7 @@ void freeG(gazdi* mostG) {
 		mostG = kov;
 	}
 }
-
+//fájlbeolvasás, paraméter a fájlnév, egy sor egy mátrixba kerül szétszelve (;), a uj és LL függvényekkel létrejön az adatbázis
 gazdi* fajlBe(char fajlnev[]) {
 	FILE* fajl = fopen(fajlnev, "r");
 	char adatsor[256];

@@ -1,12 +1,17 @@
 #include "debugmalloc.h"
 #include "adatbazis.h"
+#include "menu.h"
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
-
+// visszaad egy lefoglalt méretű karakter pointert csupa kisbetűkkel a nagybetűs hibák elkerülése érdekében
+// a paraméter hossza+1 méretű a terület a lezáró karakter miatt
 char* kisbetus(char szoveg[]) {
 	char* re = malloc(strlen(szoveg) + 1);
-	for (int i = 0; szoveg[i] != '\0';i++) {
+	if (re == NULL) {
+		return NULL;
+	}
+	for (int i = 0; szoveg[i] != '\0'; i++) {
 		re[i] = tolower(szoveg[i]);
 	}
 	re[strlen(szoveg)] = '\0';
@@ -14,11 +19,17 @@ char* kisbetus(char szoveg[]) {
 	return re;
 }
 
-
+//törli a terminál tartalmát külön definiálva windows és linuxra
 void clear() {
-	printf("\033[H\033[J");
+#ifdef _WIN32
+	system("cls");
+#else
+	system("clear");
+#endif
 }
-
+//Kiírja a találatokat, megkapja a beírt szöveget és a fő változót
+// külön változóba menti a kisbetűs kereszt- és vezetéknevet, összehasonlít, kiír
+//lépteti a láncszemeket, majd a végén felszabadít 
 void keresett_g(char* ker, gazdi* adatok) {
 	clear();
 	printf("/// TALALATOK %s /// [ENTER] Visszateres\n", ker);
@@ -31,7 +42,7 @@ void keresett_g(char* ker, gazdi* adatok) {
 			printf("Nev: %s %s\n", adatok->nev.vezetek, adatok->nev.kereszt);
 			printf("Telefonszam: %s\n", adatok->telefon);
 			allat* mostAllatok = adatok->allatok;
-			printf("Allatok:%s",mostAllatok->nev);
+			printf("Allatok:%s", mostAllatok->nev);
 			mostAllatok = mostAllatok->kov;
 			while (mostAllatok != NULL) {
 				printf("\n\t%s", mostAllatok->nev);
@@ -50,7 +61,7 @@ void keresett_g(char* ker, gazdi* adatok) {
 	getchar();
 	getchar();
 }
-
+// paramétere az fő változó, ha nem 0-át ír be, meghívja a keresett függvényt
 void gazdi_kereses(gazdi* adatok) {
 	char ker[50];
 	while (1) {
@@ -68,7 +79,7 @@ void gazdi_kereses(gazdi* adatok) {
 
 	}
 }
-
+//paramétere a fő változó, kiírja a keresés menüt, kezeli a kiválasztást
 void kereses_menu(gazdi* adatok) {
 	int kiv = -1;
 	while (kiv != '0') {
@@ -95,12 +106,12 @@ void kereses_menu(gazdi* adatok) {
 			break;
 		case '0':
 			break;
-			default:
-				printf("Hiba! A menupont szamat valaszd!");
+		default:
+			printf("Hiba! A menupont szamat valaszd!");
 		}
 	}
 }
-
+//paramétere a fő változó, kiírja a menüt, kezeli a kiválasztást
 void menu_init(gazdi* adatok) {
 	int kiv = -1;
 	while (kiv != '0') {

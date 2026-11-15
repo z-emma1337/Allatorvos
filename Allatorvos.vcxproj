@@ -146,6 +146,7 @@
   <ItemGroup>
     <ClInclude Include="adatbazis.h" />
     <ClInclude Include="debugmalloc.h" />
+    <ClInclude Include="menu.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="adatok.txt" />

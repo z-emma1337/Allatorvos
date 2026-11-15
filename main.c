@@ -1,5 +1,6 @@
 #include "debugmalloc.h"
 #include "adatbazis.h"
+#include "menu.h"
 
 int main() {
     gazdi* adatok = fajlBe("adatok.txt");
