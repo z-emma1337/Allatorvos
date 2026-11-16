@@ -24,6 +24,12 @@
     <ClCompile Include="menu.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="gazdi_kereses.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="allat_kereses.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="debugmalloc.h">
@@ -33,6 +39,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gazdi_kereses.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="allat_kereses.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

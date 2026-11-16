@@ -1,0 +1,300 @@
+G;Kovacs Anna;06301000000
+A;Morzsi;kutya;2025.01.10
+K;2025.02.04;Altalanos vizsgalat
+K;2025.03.23;Vedooltas
+K;2025.05.09;Fulfertozes kezelese
+K;2025.06.25;Fogko eltavolitas
+A;Luna;macska;2025.01.21
+K;2025.02.16;Vedooltas
+K;2025.04.04;Fulfertozes kezelese
+K;2025.05.21;Fogko eltavolitas
+K;2025.07.07;Borvizsgalat
+G;Nagy Bence;06501000001
+A;Bodri;nyul;2025.02.01
+K;2025.02.28;Fulfertozes kezelese
+K;2025.04.16;Fogko eltavolitas
+K;2025.06.02;Borvizsgalat
+K;2025.07.19;Kontroll vizsgalat
+A;Cirmi;tengerimalac;2025.02.12
+K;2025.03.12;Fogko eltavolitas
+K;2025.04.28;Borvizsgalat
+K;2025.06.14;Kontroll vizsgalat
+G;Toth Dora;06701000002
+A;Zokni;papagaj;2025.02.23
+K;2025.03.24;Borvizsgalat
+K;2025.05.10;Kontroll vizsgalat
+K;2025.06.26;Vitaminpotlas
+A;Mici;teknos;2025.03.06
+K;2025.04.05;Kontroll vizsgalat
+K;2025.05.22;Vitaminpotlas
+K;2025.07.08;Sebkezeles
+G;Szabo Mate;06901000003
+A;Buksi;kutya;2025.03.17
+K;2025.04.17;Vitaminpotlas
+K;2025.06.03;Sebkezeles
+K;2025.07.20;Fereghajtas
+A;Pamacs;macska;2025.03.28
+K;2025.04.29;Sebkezeles
+K;2025.06.15;Fereghajtas
+K;2025.08.01;Allapotfelmeres
+G;Horvath Eszter;06301000004
+A;Foltos;nyul;2025.04.08
+K;2025.05.11;Fereghajtas
+K;2025.06.27;Allapotfelmeres
+K;2025.08.13;Szemvizsgalat
+A;Molly;tengerimalac;2025.04.19
+K;2025.05.23;Allapotfelmeres
+K;2025.07.09;Szemvizsgalat
+K;2025.08.25;Karmok vagasa
+G;Varga David;06501000005
+A;Bruno;papagaj;2025.04.30
+K;2025.06.04;Szemvizsgalat
+K;2025.07.21;Karmok vagasa
+K;2025.09.06;Altalanos vizsgalat
+A;Mancs;teknos;2025.05.11
+K;2025.06.16;Karmok vagasa
+K;2025.08.02;Altalanos vizsgalat
+K;2025.09.18;Vedooltas
+G;Kiss Lilla;06701000006
+A;Lili;kutya;2025.05.22
+K;2025.06.28;Altalanos vizsgalat
+K;2025.08.14;Vedooltas
+K;2025.09.30;Fulfertozes kezelese
+A;Max;macska;2025.06.02
+K;2025.06.27;Vedooltas
+K;2025.08.13;Fulfertozes kezelese
+K;2025.09.29;Fogko eltavolitas
+G;Molnar Marcell;06901000007
+A;Nala;nyul;2025.06.13
+K;2025.07.09;Fulfertozes kezelese
+K;2025.08.25;Fogko eltavolitas
+K;2025.10.11;Borvizsgalat
+A;Picur;tengerimalac;2025.06.24
+K;2025.07.21;Fogko eltavolitas
+K;2025.09.06;Borvizsgalat
+K;2025.10.23;Kontroll vizsgalat
+G;Nemeth Zsofia;06301000008
+A;Samu;papagaj;2025.07.05
+K;2025.08.02;Borvizsgalat
+K;2025.09.18;Kontroll vizsgalat
+K;2025.11.04;Vitaminpotlas
+A;Bella;teknos;2025.07.16
+K;2025.08.14;Kontroll vizsgalat
+K;2025.09.30;Vitaminpotlas
+K;2025.11.16;Sebkezeles
+G;Farkas Adam;06501000009
+A;Tappancs;kutya;2025.07.27
+K;2025.08.26;Vitaminpotlas
+K;2025.10.12;Sebkezeles
+K;2025.11.28;Fereghajtas
+A;Charlie;macska;2025.08.07
+K;2025.09.07;Sebkezeles
+K;2025.10.24;Fereghajtas
+K;2025.12.10;Allapotfelmeres
+G;Balogh Nora;06701000010
+A;Maja;nyul;2025.08.18
+K;2025.09.19;Fereghajtas
+K;2025.11.05;Allapotfelmeres
+K;2025.12.22;Szemvizsgalat
+A;Rex;tengerimalac;2025.08.29
+K;2025.10.01;Allapotfelmeres
+K;2025.11.17;Szemvizsgalat
+K;2026.01.03;Karmok vagasa
+G;Papp Balazs;06901000011
+A;Mimi;papagaj;2025.09.09
+K;2025.10.13;Szemvizsgalat
+K;2025.11.29;Karmok vagasa
+K;2026.01.15;Altalanos vizsgalat
+A;Fifi;teknos;2025.09.20
+K;2025.10.25;Karmok vagasa
+K;2025.12.11;Altalanos vizsgalat
+K;2026.01.27;Vedooltas
+G;Lakatos Reka;06301000012
+A;Rocky;kutya;2025.10.01
+K;2025.11.06;Altalanos vizsgalat
+K;2025.12.23;Vedooltas
+K;2026.02.08;Fulfertozes kezelese
+A;Pihe;macska;2025.10.12
+K;2025.11.18;Vedooltas
+K;2026.01.04;Fulfertozes kezelese
+K;2026.02.20;Fogko eltavolitas
+G;Takacs Peter;06501000013
+A;Kormi;nyul;2025.10.23
+K;2025.11.17;Fulfertozes kezelese
+K;2026.01.03;Fogko eltavolitas
+K;2026.02.19;Borvizsgalat
+A;Daisy;tengerimalac;2025.11.03
+K;2025.11.29;Fogko eltavolitas
+K;2026.01.15;Borvizsgalat
+K;2026.03.03;Kontroll vizsgalat
+G;Juhasz Fanni;06701000014
+A;Teddy;papagaj;2025.11.14
+K;2025.12.11;Borvizsgalat
+K;2026.01.27;Kontroll vizsgalat
+K;2026.03.15;Vitaminpotlas
+A;Suti;teknos;2025.11.25
+K;2025.12.23;Kontroll vizsgalat
+K;2026.02.08;Vitaminpotlas
+K;2026.03.27;Sebkezeles
+G;Meszaros Daniel;06901000015
+A;Morzsa;kutya;2025.12.06
+K;2026.01.04;Vitaminpotlas
+K;2026.02.20;Sebkezeles
+K;2026.04.08;Fereghajtas
+A;Cuki;macska;2025.12.17
+K;2026.01.16;Sebkezeles
+K;2026.03.04;Fereghajtas
+K;2026.04.20;Allapotfelmeres
+G;Simon Judit;06301000016
+A;Beni;nyul;2025.12.28
+K;2026.01.28;Fereghajtas
+K;2026.03.16;Allapotfelmeres
+K;2026.05.02;Szemvizsgalat
+A;Panka;tengerimalac;2026.01.08
+K;2026.02.09;Allapotfelmeres
+K;2026.03.28;Szemvizsgalat
+K;2026.05.14;Karmok vagasa
+G;Racz Milan;06501000017
+A;Leo;papagaj;2026.01.19
+K;2026.02.21;Szemvizsgalat
+K;2026.04.09;Karmok vagasa
+K;2026.05.26;Altalanos vizsgalat
+A;Zsombi;teknos;2026.01.30
+K;2026.03.05;Karmok vagasa
+K;2026.04.21;Altalanos vizsgalat
+K;2026.06.07;Vedooltas
+G;Fekete Laura;06701000018
+A;Tigris;kutya;2026.02.10
+K;2026.03.17;Altalanos vizsgalat
+K;2026.05.03;Vedooltas
+K;2026.06.19;Fulfertozes kezelese
+A;Potyi;macska;2026.02.21
+K;2026.03.29;Vedooltas
+K;2026.05.15;Fulfertozes kezelese
+K;2026.07.01;Fogko eltavolitas
+G;Szucs Gergely;06901000019
+A;Keksz;nyul;2026.03.04
+K;2026.04.10;Fulfertozes kezelese
+K;2026.05.27;Fogko eltavolitas
+K;2026.07.13;Borvizsgalat
+A;Loki;tengerimalac;2026.03.15
+K;2026.04.09;Fogko eltavolitas
+K;2026.05.26;Borvizsgalat
+K;2026.07.12;Kontroll vizsgalat
+G;Kerekes Kata;06301000020
+A;Bogyo;papagaj;2026.03.26
+K;2026.04.21;Borvizsgalat
+K;2026.06.07;Kontroll vizsgalat
+K;2026.07.24;Vitaminpotlas
+A;Manka;teknos;2026.04.06
+K;2026.05.03;Kontroll vizsgalat
+K;2026.06.19;Vitaminpotlas
+K;2026.08.05;Sebkezeles
+G;Ordog Levente;06501000021
+A;Hektor;kutya;2026.04.17
+K;2026.05.15;Vitaminpotlas
+K;2026.07.01;Sebkezeles
+K;2026.08.17;Fereghajtas
+A;Zara;macska;2026.04.28
+K;2026.05.27;Sebkezeles
+K;2026.07.13;Fereghajtas
+K;2026.08.29;Allapotfelmeres
+G;Boros Viktoria;06701000022
+A;Bambi;nyul;2026.05.09
+K;2026.06.08;Fereghajtas
+K;2026.07.25;Allapotfelmeres
+K;2026.09.10;Szemvizsgalat
+A;Koko;tengerimalac;2026.05.20
+K;2026.06.20;Allapotfelmeres
+K;2026.08.06;Szemvizsgalat
+K;2026.09.22;Karmok vagasa
+G;Feher Andras;06901000023
+A;Fuge;papagaj;2026.05.31
+K;2026.07.02;Szemvizsgalat
+K;2026.08.18;Karmok vagasa
+K;2026.10.04;Altalanos vizsgalat
+A;Snoopy;teknos;2026.06.11
+K;2026.07.14;Karmok vagasa
+K;2026.08.30;Altalanos vizsgalat
+K;2026.10.16;Vedooltas
+G;Gulyas Emese;06301000024
+A;Mazli;kutya;2026.06.22
+K;2026.07.26;Altalanos vizsgalat
+K;2026.09.11;Vedooltas
+K;2026.10.28;Fulfertozes kezelese
+A;Csoki;macska;2026.07.03
+K;2026.08.07;Vedooltas
+K;2026.09.23;Fulfertozes kezelese
+K;2026.11.09;Fogko eltavolitas
+G;Sipos Tamas;06501000025
+A;Pufi;nyul;2026.07.14
+K;2026.08.19;Fulfertozes kezelese
+K;2026.10.05;Fogko eltavolitas
+K;2026.11.21;Borvizsgalat
+A;Mokka;tengerimalac;2026.07.25
+K;2026.08.31;Fogko eltavolitas
+K;2026.10.17;Borvizsgalat
+K;2026.12.03;Kontroll vizsgalat
+G;Fodor Bianka;06701000026
+A;Donci;papagaj;2026.08.05
+K;2026.08.30;Borvizsgalat
+K;2026.10.16;Kontroll vizsgalat
+K;2026.12.02;Vitaminpotlas
+A;Pocok;teknos;2026.08.16
+K;2026.09.11;Kontroll vizsgalat
+K;2026.10.28;Vitaminpotlas
+K;2026.12.14;Sebkezeles
+G;Vincze Kristof;06901000027
+A;Zizi;kutya;2026.08.27
+K;2026.09.23;Vitaminpotlas
+K;2026.11.09;Sebkezeles
+K;2026.12.26;Fereghajtas
+A;Rudi;macska;2026.09.07
+K;2026.10.05;Sebkezeles
+K;2026.11.21;Fereghajtas
+K;2027.01.07;Allapotfelmeres
+G;Barta Noemi;06301000028
+A;Misu;nyul;2026.09.18
+K;2026.10.17;Fereghajtas
+K;2026.12.03;Allapotfelmeres
+K;2027.01.19;Szemvizsgalat
+A;Bora;tengerimalac;2026.09.29
+K;2026.10.29;Allapotfelmeres
+K;2026.12.15;Szemvizsgalat
+K;2027.01.31;Karmok vagasa
+G;Antal Mark;06501000029
+A;Tomi;papagaj;2026.10.10
+K;2026.11.10;Szemvizsgalat
+K;2026.12.27;Karmok vagasa
+K;2027.02.12;Altalanos vizsgalat
+A;Gomboc;teknos;2026.10.21
+K;2026.11.22;Karmok vagasa
+K;2027.01.08;Altalanos vizsgalat
+K;2027.02.24;Vedooltas
+G;Lukacs Csilla;06701000030
+A;Pityu;kutya;2025.01.20
+K;2025.02.22;Altalanos vizsgalat
+K;2025.04.10;Vedooltas
+K;2025.05.27;Fulfertozes kezelese
+A;Mici2;macska;2025.01.31
+K;2025.03.06;Vedooltas
+K;2025.04.22;Fulfertozes kezelese
+K;2025.06.08;Fogko eltavolitas
+G;Biro Boglarka;06901000031
+A;Kira;nyul;2025.02.11
+K;2025.03.18;Fulfertozes kezelese
+K;2025.05.04;Fogko eltavolitas
+K;2025.06.20;Borvizsgalat
+A;Boris;tengerimalac;2025.02.22
+K;2025.03.30;Fogko eltavolitas
+K;2025.05.16;Borvizsgalat
+K;2025.07.02;Kontroll vizsgalat
+G;Katona Zoltan;06301000032
+A;Lencse;papagaj;2025.03.05
+K;2025.04.11;Borvizsgalat
+K;2025.05.28;Kontroll vizsgalat
+K;2025.07.14;Vitaminpotlas
+A;Morzsa2;teknos;2025.03.16
+K;2025.04.10;Kontroll vizsgalat
+K;2025.05.27;Vitaminpotlas
+K;2025.07.13;Sebkezeles
