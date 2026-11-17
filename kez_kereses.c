@@ -14,25 +14,25 @@ void keresett_k(char* ker, gazdi* adatok) {
 	while (mostGazdi != NULL) {
 		allat* mostAllat = mostGazdi->allatok;
 		while (mostAllat != NULL) {
-			char* mostNev = kisbetus(mostAllat->nev);
-			if (strstr(mostNev, ker) != NULL) {
-				printf("------------------------\n");
-				printf("Nev: %s\n", mostAllat->nev);
-				printf("Gazdi: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
-				datumTipus mostOltas = mostAllat->oltas;
-				printf("Oltas: %04d.%02d.%02d\n", mostOltas.ev, mostOltas.honap, mostOltas.nap);
-				kezeles* mostKezelesek = mostAllat->kezelesek;
-				printf("Kezelesek:%s", mostKezelesek->leiras);
-				mostKezelesek = mostKezelesek->kov;
-				while (mostKezelesek != NULL) {
-					printf("\n\t  %s", mostKezelesek->leiras);
-					mostKezelesek = mostKezelesek->kov;
-				}
-				printf("\n");
-			}
 
+
+				kezeles* mostKez = mostAllat->kezelesek;
+				while (mostKez != NULL) {
+				char* mostLeiras = kisbetus(mostKez->leiras);
+				if (strstr(mostLeiras, ker) != NULL) {
+					printf("------------------------\n");
+					printf("Leiras: %s\n", mostKez->leiras);
+					datumTipus mostDatum = mostKez->datum;
+					printf("Datum: %04d.%02d.%02d\n", mostDatum.ev, mostDatum.honap, mostDatum.nap);
+					printf("Allat:%s", mostAllat->nev);
+
+					printf("\n");
+				}
+				mostKez = mostKez->kov;
+				free(mostLeiras);
+
+			}
 			mostAllat = mostAllat->kov;
-			free(mostNev);
 
 		}
 		mostGazdi = mostGazdi->kov;
