@@ -30,6 +30,9 @@
     <ClCompile Include="allat_kereses.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="kez_kereses.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="debugmalloc.h">
@@ -45,6 +48,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="allat_kereses.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kez_kereses.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

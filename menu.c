@@ -50,7 +50,7 @@ void kereses_menu(gazdi* adatok) {
 			allat_kereses(adatok);
 			break;
 		case '3':
-			//
+			kez_kereses(adatok);
 			break;
 		case '0':
 			break;

@@ -142,6 +142,7 @@
     <ClCompile Include="adatbazis.c" />
     <ClCompile Include="allat_kereses.c" />
     <ClCompile Include="gazdi_kereses.c" />
+    <ClCompile Include="kez_kereses.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="menu.c" />
   </ItemGroup>
@@ -150,6 +151,7 @@
     <ClInclude Include="allat_kereses.h" />
     <ClInclude Include="debugmalloc.h" />
     <ClInclude Include="gazdi_kereses.h" />
+    <ClInclude Include="kez_kereses.h" />
     <ClInclude Include="menu.h" />
   </ItemGroup>
   <ItemGroup>
