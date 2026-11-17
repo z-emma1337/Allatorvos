@@ -32,9 +32,12 @@ void keresett_a(char* ker, gazdi* adatok) {
 			}
 
 			mostAllat = mostAllat->kov;
+			free(mostNev);
+
 		}
 		mostGazdi = mostGazdi->kov;
 	}
+	free(ker);
 	printf("------------------------\n");
 	printf("[ENTER] Visszateres");
 	getchar();
