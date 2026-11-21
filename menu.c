@@ -78,6 +78,7 @@ void menu_init(gazdi* adatok) {
 			kereses_menu(adatok);
 			break;
 		case '2':
+			lista(adatok);
 			break;
 		case '0':
 			break;
