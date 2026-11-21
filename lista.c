@@ -17,6 +17,8 @@ int egyEve(datumTipus a, datumTipus b) {
 
 void lista(gazdi* adatok) {
 	clear();
+	FILE* f;
+	f = fopen("lista.txt", "w");
 	time_t ido = time(NULL);
 	struct tm* datum = localtime(&ido);
 	datumTipus maiDatum = (datumTipus){ datum->tm_year + 1900,datum->tm_mon + 1,datum->tm_mday };
@@ -27,27 +29,37 @@ void lista(gazdi* adatok) {
 		allat* mostAllat = mostGazdi->allatok;
 		while (mostAllat != NULL) {
 			kezeles* mostKez = mostAllat->kezelesek;
+			datumTipus legfrissebb;
 			while (mostKez != NULL) {
 				char* mostLeiras = kisbetus(mostKez->leiras);
-				datumTipus mostDatum = mostKez->datum;
-				if (strcmp(mostLeiras, "veszettseg elleni oltas")==0 && egyEve(mostDatum,maiDatum)) {
-					printf("------------------------\n");
-					printf("Gazdi: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
-					printf("Datum: %04d.%02d.%02d\n", mostDatum.ev, mostDatum.honap, mostDatum.nap);
-					printf("Allat:%s", mostAllat->nev);
-
-					printf("\n");
+				if (strstr(mostLeiras, "veszettseg ellen") != NULL) {
+					legfrissebb = mostKez->datum;
 				}
 				mostKez = mostKez->kov;
 				free(mostLeiras);
 
 			}
+			if (egyEve(legfrissebb,maiDatum)) {
+				printf("------------------------\n");
+				printf("Gazdi: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
+				printf("Datum: %04d.%02d.%02d\n", legfrissebb.ev, legfrissebb.honap, legfrissebb.nap);
+				printf("Allat: %s", mostAllat->nev);
+				printf("\n");
+
+				fprintf(f,"------------------------\n");
+				fprintf(f,"Gazdi: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
+				fprintf(f,"Datum: %04d.%02d.%02d\n", legfrissebb.ev, legfrissebb.honap, legfrissebb.nap);
+				fprintf(f,"Allat: %s", mostAllat->nev);
+				fprintf(f,"\n");
+			}
 			mostAllat = mostAllat->kov;
 
 		}
+
 		mostGazdi = mostGazdi->kov;
 	}
 	printf("[ENTER] Visszateres");
+	fclose(f);
 	getchar();
 	getchar();
 }
