@@ -67,6 +67,7 @@ void menu_init(gazdi* adatok) {
 		printf("/// ALLATORVOS MENU ///\n");
 		printf("    [1] Kereses\n");
 		printf("    [2] Lista\n");
+		printf("    [3] Adatok kezelese\n");
 		printf("    [0] Kilepes\n");
 		printf("    Valasztas: ");
 		do {
@@ -79,6 +80,9 @@ void menu_init(gazdi* adatok) {
 			break;
 		case '2':
 			lista(adatok);
+			break;
+		case '3':
+			adatkezeles(adatok);
 			break;
 		case '0':
 			break;

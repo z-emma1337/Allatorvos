@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="adatbazis.c" />
+    <ClCompile Include="adatkezeles.c" />
     <ClCompile Include="allat_kereses.c" />
     <ClCompile Include="gazdi_kereses.c" />
     <ClCompile Include="kez_kereses.c" />
@@ -149,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="adatbazis.h" />
+    <ClInclude Include="adatkezeles.h" />
     <ClInclude Include="allat_kereses.h" />
     <ClInclude Include="debugmalloc.h" />
     <ClInclude Include="gazdi_kereses.h" />

@@ -36,6 +36,9 @@
     <ClCompile Include="lista.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="adatkezeles.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="debugmalloc.h">
@@ -57,6 +60,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="lista.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="adatkezeles.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
