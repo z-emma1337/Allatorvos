@@ -148,6 +148,7 @@
     <ClCompile Include="lista.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="menu.c" />
+    <ClCompile Include="modosit.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="adatbazis.h" />
@@ -159,6 +160,7 @@
     <ClInclude Include="kez_kereses.h" />
     <ClInclude Include="lista.h" />
     <ClInclude Include="menu.h" />
+    <ClInclude Include="modosit.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="adatok.txt" />

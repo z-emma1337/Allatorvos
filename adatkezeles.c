@@ -68,6 +68,38 @@ void ujAdat(gazdi* adatok) {
 	}
 }
 
+void modAdat(gazdi* adatok) {
+	int kiv = -1;
+	while (kiv != '0') {
+		clear();
+		printf("/// ADAT MODOSITAS ///\n");
+		printf("    [1] Gazdi modositasa\n");
+		printf("    [2] Allat modositasa\n");
+		printf("    [3] Kezeles modositasa\n");
+		printf("    [0] Kilepes\n");
+		printf("    Valasztas: ");
+		do {
+			kiv = getchar();
+
+		} while (kiv == '\n');
+		switch (kiv) {
+		case '1':
+			gazdi_mod(adatok);
+			break;
+		case '2':
+			allat_mod(adatok);
+			break;
+		case '3':
+			kezeles_mod(adatok);
+			break;
+		case '0':
+			break;
+		default:
+			printf("Hiba! A menupont szamat valaszd!");
+		}
+	}
+}
+
 
 void adatkezeles(gazdi* adatok) {
 	int kiv = -1;

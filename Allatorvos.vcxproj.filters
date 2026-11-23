@@ -42,6 +42,9 @@
     <ClCompile Include="hozzaad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="modosit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="debugmalloc.h">
@@ -69,6 +72,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="hozzaad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modosit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

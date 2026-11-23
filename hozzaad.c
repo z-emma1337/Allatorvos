@@ -1,6 +1,7 @@
 #include "debugmalloc.h"
 #include "adatbazis.h"
 #include "hozzaad.h"
+#include "adatkezeles.h"
 #include "menu.h"
 #include <stdio.h>
 #include <ctype.h>
@@ -11,7 +12,7 @@ void gazdi_hozzaad(gazdi* adatok) {
 	while (kiv != '0') {
 		nevTipus nev;
 		clear();
-		printf("/// UJ GAZDI HOZZAADASA ///\n");
+		printf("/// UJ GAZDI HOZZAADASA [0] Kilepes ///\n");
 		printf("Vezeteknev: ");
 		scanf("%s", nev.vezetek);
 		if (strcmp(nev.vezetek, "0") == 0) {
@@ -20,7 +21,7 @@ void gazdi_hozzaad(gazdi* adatok) {
 		getchar();
 
 		clear();
-		printf("/// UJ GAZDI HOZZAADASA ///\n");
+		printf("/// UJ GAZDI HOZZAADASA [0] Kilepes ///\n");
 		printf("Vezeteknev: %s\n", nev.vezetek);
 		printf("Keresztnev: ");
 		scanf("%s", nev.kereszt);
@@ -30,7 +31,7 @@ void gazdi_hozzaad(gazdi* adatok) {
 		getchar();
 
 		clear();
-		printf("/// UJ GAZDI HOZZAADASA ///\n");
+		printf("/// UJ GAZDI HOZZAADASA [0] Kilepes ///\n");
 		printf("Nev: %s %s\n", nev.vezetek, nev.kereszt);
 		printf("Telefonszam: ");
 		char telefon[12];
@@ -42,7 +43,7 @@ void gazdi_hozzaad(gazdi* adatok) {
 
 
 		clear();
-		printf("/// UJ GAZDI HOZZAADASA ///\n");
+		printf("/// UJ GAZDI HOZZAADASA [0] Kilepes ///\n");
 		printf("Nev: %s %s\n", nev.vezetek, nev.kereszt);
 		printf("Telefonszam: %s\n", telefon);
 		printf("[0] Kilepes [1] Mentes\n");
@@ -74,7 +75,7 @@ void allat_hozzaad(gazdi* adatok) {
 	int kiv = -1;
 	while (kiv != '0') {
 		clear();
-		printf("/// UJ ALLAT HOZZAADASA ///\n");
+		printf("/// UJ ALLAT HOZZAADASA [0] Kilepes///\n");
 		char telefon[12];
 		printf("Gazdi telefonszama: ");
 		scanf("%s", telefon);
@@ -102,7 +103,7 @@ void allat_hozzaad(gazdi* adatok) {
 
 
 			clear();
-			printf("/// UJ ALLAT HOZZAADASA ///\n");
+			printf("/// UJ ALLAT HOZZAADASA [0] Kilepes///\n");
 			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
 			printf("Telefonszam: %s\n", mostGazdi->telefon);
 			printf("------------------------\n");
@@ -115,7 +116,7 @@ void allat_hozzaad(gazdi* adatok) {
 			getchar();
 
 			clear();
-			printf("/// UJ ALLAT HOZZAADASA ///\n");
+			printf("/// UJ ALLAT HOZZAADASA [0] Kilepes///\n");
 			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
 			printf("Telefonszam: %s\n", mostGazdi->telefon);
 			printf("------------------------\n");
@@ -129,7 +130,7 @@ void allat_hozzaad(gazdi* adatok) {
 			getchar();
 
 			clear();
-			printf("/// UJ ALLAT HOZZAADASA ///\n");
+			printf("/// UJ ALLAT HOZZAADASA [0] Kilepes///\n");
 			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
 			printf("Telefonszam: %s\n", mostGazdi->telefon);
 			printf("------------------------\n");
@@ -143,7 +144,7 @@ void allat_hozzaad(gazdi* adatok) {
 			}
 
 			clear();
-			printf("/// UJ ALLAT HOZZAADASA ///\n");
+			printf("/// UJ ALLAT HOZZAADASA [0] Kilepes///\n");
 			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
 			printf("Telefonszam: %s\n", mostGazdi->telefon);
 			printf("------------------------\n");
@@ -190,7 +191,7 @@ void kezeles_hozzaad(gazdi* adatok) {
 	int kiv = -1;
 	while (kiv != '0') {
 		clear();
-		printf("/// UJ KEZELES HOZZAADASA ///\n");
+		printf("/// UJ KEZELES HOZZAADASA [0] Kilepes ///\n");
 		char telefon[12];
 		printf("Gazdi telefonszama: ");
 		scanf("%s", telefon);
@@ -218,7 +219,7 @@ void kezeles_hozzaad(gazdi* adatok) {
 
 
 			clear();
-			printf("/// UJ KEZELES HOZZAADASA ///\n");
+			printf("/// UJ KEZELES HOZZAADASA [0] Kilepes ///\n");
 			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
 			printf("Telefonszam: %s\n", mostGazdi->telefon);
 			printf("------------------------\n");
@@ -250,7 +251,7 @@ void kezeles_hozzaad(gazdi* adatok) {
 
 
 				clear();
-				printf("/// UJ KEZELES HOZZAADASA ///\n");
+				printf("/// UJ KEZELES HOZZAADASA [0] Kilepes ///\n");
 				printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
 				printf("Telefonszam: %s\n", mostGazdi->telefon);
 				printf("Allat neve: %s\n", mostAllat->nev);
@@ -265,7 +266,7 @@ void kezeles_hozzaad(gazdi* adatok) {
 				getchar();
 
 				clear();
-				printf("/// UJ KEZELES HOZZAADASA ///\n");
+				printf("/// UJ KEZELES HOZZAADASA [0] Kilepes ///\n");
 				printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
 				printf("Telefonszam: %s\n", mostGazdi->telefon);
 				printf("Allat neve: %s\n", mostAllat->nev);
@@ -281,8 +282,7 @@ void kezeles_hozzaad(gazdi* adatok) {
 				getchar();
 
 				clear();
-				printf("/// UJ KEZELES HOZZAADASA ///\n");
-				printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
+				printf("/// UJ KEZELES HOZZAADASA [0] Kilepes ///\n");
 				printf("Telefonszam: %s\n", mostGazdi->telefon);
 				printf("Allat neve: %s\n", mostAllat->nev);
 				printf("Allat faja: %s\n", mostAllat->faj);
