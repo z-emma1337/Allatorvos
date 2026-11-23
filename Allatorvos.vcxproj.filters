@@ -45,6 +45,9 @@
     <ClCompile Include="modosit.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="torol.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="debugmalloc.h">
@@ -75,6 +78,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="modosit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="torol.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -100,6 +100,38 @@ void modAdat(gazdi* adatok) {
 	}
 }
 
+void toroladat(gazdi* adatok) {
+	int kiv = -1;
+	while (kiv != '0') {
+		clear();
+		printf("/// ADAT TORLES ///\n");
+		printf("    [1] Gazdi torlese\n");
+		printf("    [2] Allat torlese\n");
+		printf("    [3] Kezeles torlese\n");
+		printf("    [0] Kilepes\n");
+		printf("    Valasztas: ");
+		do {
+			kiv = getchar();
+
+		} while (kiv == '\n');
+		switch (kiv) {
+		case '1':
+			gazdi_torol(adatok);
+			break;
+		case '2':
+			allat_torol(adatok);
+			break;
+		case '3':
+			kezeles_torol(adatok);
+			break;
+		case '0':
+			break;
+		default:
+			printf("Hiba! A menupont szamat valaszd!");
+		}
+	}
+}
+
 
 void adatkezeles(gazdi* adatok) {
 	int kiv = -1;
