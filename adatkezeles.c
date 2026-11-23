@@ -120,7 +120,7 @@ void adatkezeles(gazdi* adatok) {
 			ujAdat(adatok);
 			break;
 		case '2':
-
+			modAdat(adatok);
 			break;
 		case '3':
 
