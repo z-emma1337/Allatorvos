@@ -20,8 +20,11 @@ void keresett_g(char* ker, gazdi* adatok) {
 			printf("Nev: %s %s\n", adatok->nev.vezetek, adatok->nev.kereszt);
 			printf("Telefonszam: %s\n", adatok->telefon);
 			allat* mostAllatok = adatok->allatok;
-			printf("Allatok:%s", mostAllatok->nev);
-			mostAllatok = mostAllatok->kov;
+			if (mostAllatok != NULL) {
+				printf("Allatok:%s", mostAllatok->nev);
+				mostAllatok = mostAllatok->kov;
+
+			}
 			while (mostAllatok != NULL) {
 				printf("\n\t%s", mostAllatok->nev);
 				mostAllatok = mostAllatok->kov;

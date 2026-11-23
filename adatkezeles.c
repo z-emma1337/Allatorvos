@@ -15,11 +15,11 @@ void Mentes(gazdi* adatok) {
 	}
 
 	while (adatok != NULL) {
-		fprintf(fajl, "G;%s %s;%s\n", adatok->nev.vezetek, adatok->nev.kereszt, adatok->telefon);
+		fprintf(f, "G;%s %s;%s\n", adatok->nev.vezetek, adatok->nev.kereszt, adatok->telefon);
 
 		allat* a = adatok->allatok;
 		while (a != NULL) {
-			fprintf(f, "A;%s;%s;%04d.%02d.%02d\n", ev, a->faj, a->oltas.ev, a->oltas.honap, a->oltas.nap);
+			fprintf(f, "A;%s;%s;%04d.%02d.%02d\n", a->nev, a->faj, a->oltas.ev, a->oltas.honap, a->oltas.nap);
 
 			kezeles* k = a->kezelesek;
 			while (k != NULL) {
@@ -57,7 +57,7 @@ void gazdi_hozzaad(gazdi* adatok) {
 		printf("/// UJ GAZDI HOZZAADASA ///\n");
 		printf("Nev: %s %s\n", nev.vezetek, nev.kereszt);
 		printf("Telefonszam: ");
-		char telefon[11];
+		char telefon[12];
 		scanf("%s", telefon);
 		getchar();
 
@@ -96,24 +96,24 @@ void allat_hozzaad(gazdi* adatok) {
 	while (kiv != '0') {
 		clear();
 		printf("/// UJ ALLAT HOZZAADASA ///\n");
-		char telefon[11];
+		char telefon[12];
 		printf("Gazdi telefonszama: ");
 		scanf("%s", telefon);
 		getchar();
-		gazdi mostGazdi = NULL;
-		while (adatok != NULL && mostGazdi == NULL) {
-			if (strcmp(adatok->telefon, telefon) == 0) {
-				mostGazdi.nev = adatok->nev;
-				mostGazdi.telefon = adatok->telefon;
+		gazdi* mostGazdi= NULL;
+		gazdi* keres = adatok;
+		while (keres != NULL && mostGazdi == NULL) {
+			if (strcmp(keres->telefon, telefon) == 0) {
+				mostGazdi = keres;
 			}
-			adatok = adatok->kov;
+			keres = keres->kov;
 		}
 		if (mostGazdi == NULL) {
 			clear();
 			printf("Nincs ilyen gazdi!\n");	
 			printf("[ENTER] Visszateres");
 			getchar();
-			getchar();
+
 
 		}
 		else {
@@ -121,8 +121,8 @@ void allat_hozzaad(gazdi* adatok) {
 
 			clear();
 			printf("/// UJ ALLAT HOZZAADASA ///\n");
-			printf("Gazdi neve: %s %s\n", mostGazdi.nev.vezetek, mostGazdi.nev.kereszt);
-			printf("Telefonszam: %s\n",mostGazdi.telefon);
+			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
+			printf("Telefonszam: %s\n",mostGazdi->telefon);
 			printf("------------------------\n");
 			printf("Uj allat neve: ");
 			char allat[50];
@@ -131,8 +131,8 @@ void allat_hozzaad(gazdi* adatok) {
 
 			clear();
 			printf("/// UJ ALLAT HOZZAADASA ///\n");
-			printf("Gazdi neve: %s %s\n", mostGazdi.nev.vezetek, mostGazdi.nev.kereszt);
-			printf("Telefonszam: %s"\n, mostGazdi.telefon);
+			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
+			printf("Telefonszam: %s\n", mostGazdi->telefon);
 			printf("------------------------\n");
 			printf("Uj allat neve: %s\n",allat);
 			printf("Uj allat faja: ");
@@ -142,13 +142,23 @@ void allat_hozzaad(gazdi* adatok) {
 
 			clear();
 			printf("/// UJ ALLAT HOZZAADASA ///\n");
-			printf("Gazdi neve: %s %s\n", mostGazdi.nev.vezetek, mostGazdi.nev.kereszt);
-			printf("Telefonszam: %s"\n, mostGazdi.telefon);
+			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
+			printf("Telefonszam: %s\n", mostGazdi->telefon);
 			printf("------------------------\n");
 			printf("Uj allat neve: %s\n", allat);
 			printf("Uj allat faja: %s\n",faj);
+			printf("Uj allat oltasanak datuma: ");
+			char datum[11];
+			scanf("%s",datum);
 
-
+			clear();
+			printf("/// UJ ALLAT HOZZAADASA ///\n");
+			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
+			printf("Telefonszam: %s\n", mostGazdi->telefon);
+			printf("------------------------\n");
+			printf("Uj allat neve: %s\n", allat);
+			printf("Uj allat faja: %s\n", faj);
+			printf("Uj allat oltasanak datuma: %s\n",datum);
 			printf("[0] Kilepes [1] Mentes\n");
 			printf("Valasztas:");
 			do {
@@ -157,14 +167,24 @@ void allat_hozzaad(gazdi* adatok) {
 			} while (kiv == '\n');
 			switch (kiv) {
 			case '1':
-				gazdi * uj = ujGazdi(nev, telefon);
-				gazdi* utolso = adatok;
-				while (utolso->kov != NULL) {
-					utolso = utolso->kov;
+				datumTipus oltas = str_to_datum(datum);
+				allat* uj = ujAllat(allat, faj, oltas);
+
+				allat* utolso = mostGazdi->allatok;
+
+				if (utolso == NULL) {
+					mostGazdi->allatok = uj;
 				}
-				LL_Gazdi(utolso, uj);
+				else {
+					while (utolso->kov != NULL) {
+						utolso = utolso->kov;
+					}
+					LL_Allat(utolso, uj);
+				}
+
 				Mentes(adatok);
 				break;
+			
 			case '0':
 				break;
 			default:
