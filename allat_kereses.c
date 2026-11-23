@@ -22,8 +22,10 @@ void keresett_a(char* ker, gazdi* adatok) {
 				datumTipus mostOltas = mostAllat->oltas;
 				printf("Oltas: %04d.%02d.%02d\n", mostOltas.ev, mostOltas.honap, mostOltas.nap);
 				kezeles* mostKezelesek = mostAllat->kezelesek;
-				printf("Kezelesek:%s", mostKezelesek->leiras);
-				mostKezelesek = mostKezelesek->kov;
+				if (mostKezelesek != NULL) {
+					printf("Kezelesek:%s", mostKezelesek->leiras);
+					mostKezelesek = mostKezelesek->kov;
+				}
 				while (mostKezelesek != NULL) {
 					printf("\n\t  %s", mostKezelesek->leiras);
 					mostKezelesek = mostKezelesek->kov;
