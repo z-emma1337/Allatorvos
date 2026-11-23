@@ -300,3 +300,5 @@ K;2025.05.27;Vitaminpotlas
 K;2025.07.13;Sebkezeles
 G;asd assssd;1234
 A;asd;asd;1234.12.12
+K;1234.12.12;asdadsdsdasddddasd
+K;1234.01.12;dghhssddasa

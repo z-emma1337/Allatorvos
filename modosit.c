@@ -206,11 +206,10 @@ void allat_mod(gazdi* adatok) {
 				printf("------------------------\n");
 				printf("Allat neve: %s\n", mostAllat->nev);
 				printf("Allat faja: %s\n", mostAllat->faj);
-				datumTipus mostOltas = mostAllat->oltas;
 				printf("Allat oltasanak datuma: %04d.%02d.%02d\n", mostOltas.ev, mostOltas.honap, mostOltas.nap);
 				printf("------------------------\n");
-				printf("Nev modositasa: %s\n",allatNev);
-				printf("Faj modositasa: %s",);
+				printf("Nev modositasa: %s\n", allatNev);
+				printf("Faj modositasa: ");
 				char Faj[20];
 				scanf("%s", Faj);
 				if (strcmp(Faj, "0") == 0) {
@@ -228,7 +227,6 @@ void allat_mod(gazdi* adatok) {
 				printf("------------------------\n");
 				printf("Allat neve: %s\n", mostAllat->nev);
 				printf("Allat faja: %s\n", mostAllat->faj);
-				datumTipus mostOltas = mostAllat->oltas;
 				printf("Allat oltasanak datuma: %04d.%02d.%02d\n", mostOltas.ev, mostOltas.honap, mostOltas.nap);
 				printf("------------------------\n");
 				printf("Nev modositasa: %s\n", allatNev);
@@ -240,7 +238,7 @@ void allat_mod(gazdi* adatok) {
 					break;
 				}
 				datumTipus oltas = str_to_datum(datumbe);
-				if (strcmp(datum, "-") == 0) {
+				if (strcmp(datumbe, "-") == 0) {
 					oltas = mostAllat->oltas;
 				}
 				getchar();
@@ -252,7 +250,6 @@ void allat_mod(gazdi* adatok) {
 				printf("------------------------\n");
 				printf("Allat neve: %s\n", mostAllat->nev);
 				printf("Allat faja: %s\n", mostAllat->faj);
-				datumTipus mostOltas = mostAllat->oltas;
 				printf("Allat oltasanak datuma: %04d.%02d.%02d\n", mostOltas.ev, mostOltas.honap, mostOltas.nap);
 				printf("------------------------\n");
 				printf("Nev modositasa: %s\n", allatNev);
@@ -268,7 +265,9 @@ void allat_mod(gazdi* adatok) {
 				} while (kiv == '\n');
 				switch (kiv) {
 				case '1':
-
+					strcpy(mostAllat->nev, allatNev);
+					strcpy(mostAllat->faj, Faj);
+					mostAllat->oltas = oltas;
 					Mentes(adatok);
 					break;
 
@@ -284,5 +283,191 @@ void allat_mod(gazdi* adatok) {
 
 }
 void kezeles_mod(gazdi* adatok) {
+	int kiv = -1;
+	while (kiv != '0') {
+		clear();
+		printf("/// KEZELES MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
+		char telefon[12];
+		printf("Gazdi telefonszama: ");
+		scanf("%s", telefon);
+		if (strcmp(telefon, "0") == 0) {
+			break;
+		}
+		getchar();
+		gazdi* mostGazdi = NULL;
+		gazdi* keres_g = adatok;
+		while (keres_g != NULL && mostGazdi == NULL) {
+			if (strcmp(keres_g->telefon, telefon) == 0) {
+				mostGazdi = keres_g;
+			}
+			keres_g = keres_g->kov;
+		}
+		if (mostGazdi == NULL) {
+			clear();
+			printf("Nincs ilyen gazdi!\n");
+			printf("[ENTER] Visszateres");
+			getchar();
+
+
+		}
+		else {
+
+
+			clear();
+			printf("/// KEZELES MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
+			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
+			printf("Telefonszam: %s\n", mostGazdi->telefon);
+			printf("------------------------\n");
+			char allatNev[20];
+			printf("Allat neve: ");
+			scanf("%s", allatNev);
+			if (strcmp(allatNev, "0") == 0) {
+				break;
+			}
+			allat* mostAllat = NULL;
+			allat* keres_a = mostGazdi->allatok;
+			while (keres_a != NULL && mostAllat == NULL) {
+				if (strcmp(keres_a->nev, allatNev) == 0) {
+					mostAllat = keres_a;
+				}
+				keres_a = keres_a->kov;
+			}
+			if (mostAllat == NULL) {
+				clear();
+				printf("Nincs ilyen allat!\n");
+				printf("[ENTER] Visszateres");
+				getchar();
+				getchar();
+
+
+
+			}
+			else {
+				clear();
+				printf("/// KEZELES MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
+				printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
+				printf("Telefonszam: %s\n", mostGazdi->telefon);
+				printf("------------------------\n");
+				printf("Allat neve: %s\n", mostAllat->nev);
+				printf("Allat faja: %s\n", mostAllat->faj);
+				datumTipus mostOltas = mostAllat->oltas;
+				printf("Allat oltasanak datuma: %04d.%02d.%02d\n", mostOltas.ev, mostOltas.honap, mostOltas.nap);
+				printf("------------------------\n");
+
+				kezeles* mostKezelesek = mostAllat->kezelesek;
+				if (mostKezelesek == NULL) {
+					clear();
+					printf("Ez az allat meg nem volt kezelve!\n");
+					printf("[ENTER] Visszateres");
+					getchar();
+
+
+				}
+				else {
+					int sorSzam = -1;
+					kezeles* modositando = NULL;
+					while (sorSzam == -1) {
+
+						clear();
+						printf("Kezelesek: [0] Kilepes\n");
+						kezeles* felsorol = mostKezelesek;
+						for (int i = 1; felsorol != NULL; i++) {
+							datumTipus kezDatum = felsorol->datum;
+							printf("[%d] | %04d.%02d.%02d | %s\n", i, kezDatum.ev, kezDatum.honap, kezDatum.nap, felsorol->leiras);
+							felsorol = felsorol->kov;
+						}
+						printf("Modositas: ");
+						char be[10];
+						scanf("%s", be);
+						kezeles* keres_k = mostKezelesek;
+
+						for (int i = 1; keres_k != NULL && modositando == NULL; i++) {
+							char szam[10];
+							sprintf(szam, "%d", i);
+
+							if (strcmp(szam, be) == 0) {
+								sorSzam = i;
+								modositando = keres_k;
+							}
+
+							keres_k = keres_k->kov;
+						}
+						if (strcmp(be, "0") == 0) {
+							return;
+						}
+						if (sorSzam == -1) {
+							printf("Hiba! A kezeles sorszamat valaszd! [ENTER] Visszateres");
+							getchar();
+							getchar();
+						}
+
+					}
+					clear();
+					printf("/// KEZELES MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
+					datumTipus modDatum = modositando->datum;
+					printf("Datum: %04d.%02d.%02d\n", modDatum.ev, modDatum.honap, modDatum.nap);
+					printf("Leiras: %s\n", modositando->leiras);
+					printf("------------------------\n");
+					printf("Datum modositasa: ");
+					char datumbe[11];
+					scanf("%s", datumbe);
+					if (strcmp(datumbe, "0") == 0) {
+						break;
+					}
+					datumTipus datum = str_to_datum(datumbe);
+					if (strcmp(datumbe, "-") == 0) {
+						datum = modositando->datum;
+					}
+					getchar();
+
+					clear();
+					printf("/// KEZELES MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
+					printf("Datum: %04d.%02d.%02d\n", modDatum.ev, modDatum.honap, modDatum.nap);
+					printf("Leiras: %s\n", modositando->leiras);
+					printf("------------------------\n");
+					printf("Datum modositasa: %04d.%02d.%02d\n",datum.ev,datum.honap,datum.nap);
+					printf("Leiras modositasa: ");
+					char leiras[50];
+					scanf("%s", leiras);
+					if (strcmp(leiras, "0") == 0) {
+						break;
+					}
+					if (strcmp(leiras, "-") == 0) {
+						strcpy(leiras,modositando->leiras);
+					}
+					getchar();
+
+					clear();
+					printf("/// KEZELES MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
+					printf("Datum: %04d.%02d.%02d\n", modDatum.ev, modDatum.honap, modDatum.nap);
+					printf("Leiras: %s\n", modositando->leiras);
+					printf("------------------------\n");
+					printf("Datum modositasa: %04d.%02d.%02d\n", datum.ev, datum.honap, datum.nap);
+					printf("Leiras modositasa: %s\n",leiras);
+
+
+					printf("[0] Kilepes [1] Mentes\n");
+					printf("Valasztas:");
+					do {
+						kiv = getchar();
+
+					} while (kiv == '\n');
+					switch (kiv) {
+					case '1':
+						modositando->datum = datum;
+						strcpy(modositando->leiras,leiras);
+						Mentes(adatok);
+						break;
+
+					case '0':
+						break;
+					default:
+						printf("Hiba! A menupont szamat valaszd!");
+					}
+
+				}
+			}
+		}
+	}
 
 }
