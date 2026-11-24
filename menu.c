@@ -1,10 +1,16 @@
 #include "debugmalloc.h"
 #include "adatbazis.h"
 #include "menu.h"
-#include <stdio.h>
-#include <ctype.h>
+#include "gazdi_kereses.h"
+#include "allat_kereses.h"
+#include "kez_kereses.h"
+#include "lista.h"
 #include "adatkezeles.h"
 #include <string.h>
+#include <stdio.h>
+#include <ctype.h>
+#include <stdlib.h>
+
 // visszaad egy lefoglalt méretű karakter pointert csupa kisbetűkkel a nagybetűs hibák elkerülése érdekében
 char* kisbetus(char szoveg[]) {
 	char* re = malloc(strlen(szoveg) + 1);
@@ -92,10 +98,5 @@ gazdi* menu_init(gazdi* adatok) {
 		}
 	}
 	return adatok;
-
-
-
-
-
 }
 

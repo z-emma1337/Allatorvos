@@ -18,7 +18,7 @@ typedef struct kezeles {
 
 typedef struct allat {
 	char nev[20];
-	char faj[20];
+	char faj[50];
 	datumTipus oltas;
 	kezeles* kezelesek;
 	struct allat* kov;
@@ -26,7 +26,7 @@ typedef struct allat {
 
 typedef struct gazdi {
 	nevTipus nev;
-	char telefon[12];
+	char telefon[20];
 	allat* allatok;
 	struct gazdi* kov;
 }gazdi;

@@ -1,11 +1,15 @@
 #include "debugmalloc.h"
 #include "adatbazis.h"
-#include "adatkezeles.h"
 #include "menu.h"
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h>
+#include "adatkezeles.h"
+#include "hozzaad.h"
+#include "modosit.h"
 #include "torol.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+
 
 void Mentes(gazdi* adatok) {
 	FILE* f = fopen("adatok.txt", "w");

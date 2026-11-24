@@ -3,8 +3,9 @@
 #include "gazdi_kereses.h"
 #include "menu.h"
 #include <stdio.h>
-#include <ctype.h>
 #include <string.h>
+#include <stdlib.h>
+
 //Kiírja a találatokat, megkapja a beírt szöveget és a fő változót
 // külön változóba menti a kisbetűs kereszt- és vezetéknevet, összehasonlít, kiír
 //lépteti a láncszemeket, majd a végén felszabadít 

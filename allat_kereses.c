@@ -3,8 +3,9 @@
 #include "allat_kereses.h"
 #include "menu.h"
 #include <stdio.h>
-#include <ctype.h>
 #include <string.h>
+#include <stdlib.h>
+
 
 void keresett_a(char* ker, gazdi* adatok) {
 	clear();

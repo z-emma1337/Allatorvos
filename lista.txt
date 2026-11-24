@@ -1,136 +1,28 @@
 ------------------------
-Gazdi: Kovacs Anna
-Datum: 2025.02.04
-Allat: Morzsi
-------------------------
-Gazdi: Kovacs Anna
-Datum: 2025.02.16
-Allat: Luna
-------------------------
-Gazdi: Nagy Bence
-Datum: 2025.02.28
-Allat: Bodri
-------------------------
-Gazdi: Nagy Bence
-Datum: 2025.03.12
-Allat: Cirmi
-------------------------
-Gazdi: Toth Dora
-Datum: 2025.03.24
-Allat: Zokni
-------------------------
-Gazdi: Toth Dora
-Datum: 2025.04.05
-Allat: Mici
-------------------------
-Gazdi: Szabo Mate
-Datum: 2025.04.17
-Allat: Buksi
-------------------------
-Gazdi: Szabo Mate
-Datum: 2025.04.29
-Allat: Pamacs
-------------------------
-Gazdi: Horvath Eszter
-Datum: 2025.05.11
-Allat: Foltos
-------------------------
-Gazdi: Horvath Eszter
-Datum: 2025.05.23
-Allat: Molly
-------------------------
-Gazdi: Varga David
-Datum: 2025.06.04
-Allat: Bruno
-------------------------
-Gazdi: Varga David
-Datum: 2025.06.16
-Allat: Mancs
-------------------------
-Gazdi: Kiss Lilla
-Datum: 2025.06.28
-Allat: Lili
-------------------------
-Gazdi: Kiss Lilla
-Datum: 2025.06.27
-Allat: Max
-------------------------
-Gazdi: Molnar Marcell
-Datum: 2025.07.09
-Allat: Nala
-------------------------
-Gazdi: Molnar Marcell
-Datum: 2025.07.21
-Allat: Picur
-------------------------
-Gazdi: Nemeth Zsofia
-Datum: 2025.08.02
-Allat: Samu
-------------------------
-Gazdi: Nemeth Zsofia
-Datum: 2025.08.14
-Allat: Bella
-------------------------
-Gazdi: Farkas Adam
-Datum: 2025.08.26
-Allat: Tappancs
-------------------------
-Gazdi: Farkas Adam
-Datum: 2025.09.07
-Allat: Charlie
-------------------------
 Gazdi: Balogh Nora
-Datum: 2025.09.19
+Datum: 2025.08.18
 Allat: Maja
 ------------------------
 Gazdi: Balogh Nora
-Datum: 2025.10.01
+Datum: 2025.08.29
 Allat: Rex
 ------------------------
-Gazdi: Papp Balazs
-Datum: 2025.10.13
-Allat: Mimi
-------------------------
-Gazdi: Papp Balazs
-Datum: 2025.10.25
-Allat: Fifi
-------------------------
 Gazdi: Lakatos Reka
-Datum: 2025.11.06
+Datum: 2025.10.01
 Allat: Rocky
 ------------------------
 Gazdi: Lakatos Reka
-Datum: 2025.11.18
+Datum: 2025.10.12
 Allat: Pihe
 ------------------------
 Gazdi: Takacs Peter
-Datum: 2025.11.17
+Datum: 2025.10.23
 Allat: Kormi
 ------------------------
-Gazdi: Lukacs Csilla
-Datum: 2025.02.22
-Allat: Pityu
+Gazdi: Takacs Peter
+Datum: 2025.11.03
+Allat: Daisy
 ------------------------
-Gazdi: Lukacs Csilla
-Datum: 2025.03.06
-Allat: Mici2
-------------------------
-Gazdi: Biro Boglarka
-Datum: 2025.03.18
-Allat: Kira
-------------------------
-Gazdi: Biro Boglarka
-Datum: 2025.03.30
-Allat: Boris
-------------------------
-Gazdi: Katona Zoltan
-Datum: 2025.04.11
-Allat: Lencse
-------------------------
-Gazdi: Katona Zoltan
-Datum: 2025.04.10
-Allat: Morzsa2
-------------------------
-Gazdi: asd assssd
-Datum: 1234.12.12
-Allat: asd
+Gazdi: Juhasz Fanni
+Datum: 2025.11.14
+Allat: Teddy

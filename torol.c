@@ -4,14 +4,15 @@
 #include "adatkezeles.h"
 #include "menu.h"
 #include <stdio.h>
-#include <ctype.h>
 #include <string.h>
+#include <stdlib.h>
 
 gazdi* gazdi_torol(gazdi* adatok) {
+	clear();
 	int sorSzam = -1;
 	gazdi* torlendo = NULL;
 	while (sorSzam == -1) {
-		printf("/// GAZDI TORLESE [0] Kilepes [-] Nem valtozik///\n");
+		printf("/// GAZDI TORLESE [0] Kilepes///\n");
 		printf("Gazdik:\n");
 		gazdi* felsorol = adatok;
 
@@ -22,16 +23,19 @@ gazdi* gazdi_torol(gazdi* adatok) {
 		printf("Torles: ");
 		char be[10];
 		scanf("%s", be);
+
+		int valasztas = -1;
+		sscanf(be, "%d", &valasztas);
+
+		if (valasztas == 0) {
+			return adatok;
+		}
 		gazdi* keres_g = adatok;
 		for (int i = 1; keres_g != NULL && torlendo == NULL; i++) {
-			char szam[10];
-			sprintf(szam, "%d", i);
-
-			if (strcmp(szam, be) == 0) {
+			if (valasztas == i) {
 				sorSzam = i;
 				torlendo = keres_g;
 			}
-
 			keres_g = keres_g->kov;
 		}
 		if (strcmp(be, "0") == 0) {
@@ -56,7 +60,6 @@ gazdi* gazdi_torol(gazdi* adatok) {
 
 	}
 	else {
-		elozo = adatok;
 		adatok = adatok->kov;
 	}
 	torlendo->kov = NULL;
@@ -113,16 +116,16 @@ gazdi* allat_torol(gazdi* adatok) {
 			printf("Torles: ");
 			char be[10];
 			scanf("%s", be);
-			if (strcmp(be, "0") == 0) {
+			int valasztas = -1;
+			sscanf(be, "%d", &valasztas);
+
+			if (valasztas == 0) {
 				return adatok;
 			}
 
 			allat* keres_a = mostGazdi->allatok;
 			for (int i = 1; keres_a != NULL && torlendo == NULL; i++) {
-				char szam[10];
-				sprintf(szam, "%d", i);
-
-				if (strcmp(szam, be) == 0) {
+				if (valasztas == i) {
 					sorSzam = i;
 					torlendo = keres_a;
 				}
@@ -207,10 +210,14 @@ gazdi* kezeles_torol(gazdi* adatok) {
 
 			allat* keres_a = mostGazdi->allatok;
 			while (keres_a != NULL && mostAllat == NULL) {
-				if (strcmp(keres_a->nev, allatNev) == 0) {
+				char* mostNev = kisbetus(keres_a->nev);
+				char* k_allatNev = kisbetus(allatNev);
+				if (strcmp(mostNev,k_allatNev) == 0) {
 					mostAllat = keres_a;
 				}
 				keres_a = keres_a->kov;
+				free(mostNev);
+				free(k_allatNev);
 			}
 
 			if (mostAllat == NULL) {
@@ -243,16 +250,15 @@ gazdi* kezeles_torol(gazdi* adatok) {
 		printf("Torles: ");
 		char be[10];
 		scanf("%s", be);
-		if (strcmp(be, "0") == 0) {
+		int valasztas = -1;
+		sscanf(be, "%d", &valasztas);
+
+		if (valasztas == 0) {
 			return adatok;
 		}
-
 		kezeles* keres_k = mostAllat->kezelesek;
 		for (int i = 1; keres_k != NULL && torlendo == NULL; i++) {
-			char szam[10];
-			sprintf(szam, "%d", i);
-
-			if (strcmp(szam, be) == 0) {
+			if (valasztas == i) {
 				sorSzam = i;
 				torlendo = keres_k;
 			}

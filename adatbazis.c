@@ -3,23 +3,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-//Megfelelő paraméterekkel létrehoz egy új gazdi típusu pointert amit utána vissza is ad
+/*
+ujGazdi: paraméterei: névtípus, string telefonszám, visszaad egy gazdit.
+Dinamikusan lefoglalja az új gazdi méretét, majd a paraméterek segítségével létrehozza az új gazdit
+A maradék paraméterek nullpointerek.
+*/
 gazdi* ujGazdi(nevTipus nev, char telefon[]) { //pointer "láncszem"
 	gazdi* uj = (gazdi*)malloc(sizeof(gazdi));
 	if (uj == NULL) {
 		return NULL;
 	}
 	uj->nev = nev; //->  "." helyett, mert pointer
-	for (int i = 0; i < 11; i++) {
-		uj->telefon[i] = telefon[i];
-	}
-	uj->telefon[11] = '\0';
+	strcpy(uj->telefon, telefon);
 	uj->allatok = NULL;
 	uj->kov = NULL;
 	return uj;
 }
 
-
+/*
+ujAllat: paraméterei: string név, faj és dátumtípus az oltásnak, visszaad egy állatot.
+Dinamikusan lefoglalja az új állat méretét, majd a paramétereknek megfelelően létrehozza az új állatot.
+a maradék paraméterek nullpointerek
+*/
 allat* ujAllat(char nev[], char faj[], datumTipus oltas) {
 	allat* uj = (allat*)malloc(sizeof(allat));
 	if (uj == NULL) {
@@ -32,6 +37,10 @@ allat* ujAllat(char nev[], char faj[], datumTipus oltas) {
 	uj->kov = NULL;
 	return uj;
 }
+/*
+ujKez: paraméterei: dátumtípus, string leírás, vissza ad egy kezelést.
+Dinamikusan lefoglalja az új kezelés méretét, a paraméterekkel létrehozza az új kezelést és a következőnek a pointerét nullon hagyja.
+*/
 
 kezeles* ujKez(datumTipus datum, char leiras[]) {
 	kezeles* uj = (kezeles*)malloc(sizeof(kezeles));
@@ -97,8 +106,13 @@ void freeG(gazdi* mostG) {
 		mostG = kov;
 	}
 }
-//fájlbeolvasás, paraméter a fájlnév, egy sor egy mátrixba kerül szétszelve (;), a uj és LL függvényekkel létrejön az adatbázis
+
+/*
+ fajlBe:parametere a fajlnev, visszaadja a head gazdi elemet.
+ Beolvassa a pontosvesszovel tagolt szovegfajlt, es felepiti a 3 szintu lancolt listat.
+ */
 gazdi* fajlBe(char fajlnev[]) {
+	// 1. Fajl megnyitasa olvasasra es NULL ellenorzes
 	FILE* fajl = fopen(fajlnev, "r");
 	char adatsor[256];
 	char adatok[5][50];
@@ -107,14 +121,19 @@ gazdi* fajlBe(char fajlnev[]) {
 		return NULL;
 	}
 
+	// 2. Segedmutatok:
+	// elso = teljes lista feje + mostani elemek
 	gazdi* elso = NULL;
 	gazdi* mostG = NULL;
 	allat* mostA = NULL;
 	kezeles* mostK = NULL;
+
+	// 3. Soronkenti beolvasas (fgets) es darabolas az adatok[sor][oszlop] matrixba ';' menten
 	while (fgets(adatsor, 256, fajl)) {
 		int sor = 0;
 		int oszlop = 0;
 		for (int i = 0; adatsor[i] != '\0'; i++) {
+			// Elvalaszto vagy sorveg eseten lezaras es uj sorba lepunk
 			if (adatsor[i] != ';' && adatsor[i] != '\n') {
 				adatok[sor][oszlop] = adatsor[i];
 				oszlop++;
@@ -127,7 +146,9 @@ gazdi* fajlBe(char fajlnev[]) {
 		}
 		adatok[sor][oszlop] = '\0';
 
-		if (adatok[0][0] == 'G') {//gazdi
+		// 4. Sor tipusanak (elso karakter) eldontese es bekotes a megfelelo lancolt lista vegere:
+		// - 'G': uj gazdi -> ha elso == NULL, o az elso; kulonben LL_Gazdi; mostA lenullazasa!
+		if (adatok[0][0] == 'G') {
 			gazdi* uj = ujGazdi(str_to_nev(adatok[1]), adatok[2]);
 			if (elso == NULL) {
 				elso = uj;
@@ -138,7 +159,8 @@ gazdi* fajlBe(char fajlnev[]) {
 			mostG = uj;
 			mostA = NULL;
 		}
-		else if (adatok[0][0] == 'A') {//állat
+		// - 'A': uj allat -> aktualis gazdi (mostG->allatok) vegere fuzes; mostK lenullazasa!
+		else if (adatok[0][0] == 'A') {
 			allat* uj = ujAllat(adatok[1], adatok[2], str_to_datum(adatok[3]));
 			if (mostG->allatok == NULL) {
 				mostG->allatok = uj;
@@ -149,7 +171,8 @@ gazdi* fajlBe(char fajlnev[]) {
 			mostA = uj;
 			mostK = NULL;
 		}
-		else if (adatok[0][0] == 'K') {//kezelés
+		// - 'K': uj kezeles -> aktualis allat (mostA->kezelesek) vegere fuzes
+		else if (adatok[0][0] == 'K') {
 			kezeles* uj = ujKez(str_to_datum(adatok[1]), adatok[2]);
 			if (mostA->kezelesek == NULL) {
 				mostA->kezelesek = uj;

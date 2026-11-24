@@ -4,8 +4,9 @@
 #include "adatkezeles.h"
 #include "menu.h"
 #include <stdio.h>
-#include <ctype.h>
 #include <string.h>
+#include <stdlib.h>
+
 
 void gazdi_hozzaad(gazdi* adatok) {
 	int kiv = -1;
@@ -34,7 +35,7 @@ void gazdi_hozzaad(gazdi* adatok) {
 		printf("/// UJ GAZDI HOZZAADASA [0] Kilepes ///\n");
 		printf("Nev: %s %s\n", nev.vezetek, nev.kereszt);
 		printf("Telefonszam: ");
-		char telefon[12];
+		char telefon[20];
 		scanf("%s", telefon);
 		if (strcmp(telefon, "0") == 0) {
 			break;
@@ -76,7 +77,7 @@ void allat_hozzaad(gazdi* adatok) {
 	while (kiv != '0') {
 		clear();
 		printf("/// UJ ALLAT HOZZAADASA [0] Kilepes///\n");
-		char telefon[12];
+		char telefon[20];
 		printf("Gazdi telefonszama: ");
 		scanf("%s", telefon);
 		if (strcmp(telefon, "0") == 0) {
@@ -136,8 +137,8 @@ void allat_hozzaad(gazdi* adatok) {
 			printf("------------------------\n");
 			printf("Uj allat neve: %s\n", allatNev);
 			printf("Uj allat faja: %s\n", faj);
-			printf("Uj allat oltasanak datuma: ");
-			char datum[11];
+			printf("Uj allat oltasanak datuma [YYYY.MM.DD]: ");
+			char datum[20];
 			scanf("%s", datum);
 			if (strcmp(datum, "0") == 0) {
 				break;
@@ -192,7 +193,7 @@ void kezeles_hozzaad(gazdi* adatok) {
 	while (kiv != '0') {
 		clear();
 		printf("/// UJ KEZELES HOZZAADASA [0] Kilepes ///\n");
-		char telefon[12];
+		char telefon[20];
 		printf("Gazdi telefonszama: ");
 		scanf("%s", telefon);
 		if (strcmp(telefon, "0") == 0) {
@@ -234,10 +235,14 @@ void kezeles_hozzaad(gazdi* adatok) {
 			allat* mostAllat = NULL;
 			allat* keres_a = mostGazdi->allatok;
 			while (keres_a != NULL && mostAllat == NULL) {
-				if (strcmp(keres_a->nev, allatNev) == 0) {
+				char* mostNev = kisbetus(keres_a->nev);
+				char* k_allatNev = kisbetus(allatNev);
+				if (strcmp(mostNev, k_allatNev) == 0) {
 					mostAllat = keres_a;
 				}
 				keres_a = keres_a->kov;
+				free(k_allatNev);
+				free(mostNev);
 			}
 
 			if (mostAllat == NULL) {
@@ -259,7 +264,7 @@ void kezeles_hozzaad(gazdi* adatok) {
 				printf("------------------------\n");
 				printf("Kezeles leirasa: ");
 				char kez[50];
-				scanf("%s", kez);
+				scanf("%[^\n]", kez);
 				if (strcmp(kez, "0") == 0) {
 					break;
 				}
@@ -273,7 +278,7 @@ void kezeles_hozzaad(gazdi* adatok) {
 				printf("Allat faja: %s\n", mostAllat->faj);
 				printf("------------------------\n");
 				printf("Kezeles leirasa: %s\n",kez);
-				printf("Datum: ");
+				printf("Datum [YYYY.MM.DD]: ");
 				char datum[11];
 				scanf("%s", datum);
 				if (strcmp(datum, "0") == 0) {
