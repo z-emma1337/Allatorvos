@@ -1,42 +1,3 @@
-G;Kovacs Anna;06301000000
-A;Morzsi;kutya;2025.01.10
-K;2025.02.04;Altalanos vizsgalat
-K;2025.03.23;Vedooltas
-K;2025.05.09;Fulfertozes kezelese
-K;2025.06.25;Fogko eltavolitas
-A;Luna;macska;2025.01.21
-K;2025.02.16;Vedooltas
-K;2025.04.04;Fulfertozes kezelese
-K;2025.05.21;Fogko eltavolitas
-K;2025.07.07;Borvizsgalat
-G;Nagy Bence;06501000001
-A;Bodri;nyul;2025.02.01
-K;2025.02.28;Fulfertozes kezelese
-K;2025.04.16;Fogko eltavolitas
-K;2025.06.02;Borvizsgalat
-K;2025.07.19;Kontroll vizsgalat
-A;Cirmi;tengerimalac;2025.02.12
-K;2025.03.12;Fogko eltavolitas
-K;2025.04.28;Borvizsgalat
-K;2025.06.14;Kontroll vizsgalat
-G;Toth Dora;06701000002
-A;Zokni;papagaj;2025.02.23
-K;2025.03.24;Borvizsgalat
-K;2025.05.10;Kontroll vizsgalat
-K;2025.06.26;Vitaminpotlas
-A;Mici;teknos;2025.03.06
-K;2025.04.05;Kontroll vizsgalat
-K;2025.05.22;Vitaminpotlas
-K;2025.07.08;Sebkezeles
-G;Szabo Mate;06901000003
-A;Buksi;kutya;2025.03.17
-K;2025.04.17;Vitaminpotlas
-K;2025.06.03;Sebkezeles
-K;2025.07.20;Fereghajtas
-A;Pamacs;macska;2025.03.28
-K;2025.04.29;Sebkezeles
-K;2025.06.15;Fereghajtas
-K;2025.08.01;Allapotfelmeres
 G;Horvath Eszter;06301000004
 A;Foltos;nyul;2025.04.08
 K;2025.05.11;Fereghajtas
@@ -302,3 +263,6 @@ G;asd assssd;1234
 A;asd;asd;1234.12.12
 K;1234.12.12;asdadsdsdasddddasd
 K;1234.01.12;dghhssddasa
+G;Kiss Geza;06701234567
+A;Pompom;Onemetjuhasz;2026.09.12
+K;2026.12.12;Kontroll

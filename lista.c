@@ -29,7 +29,7 @@ void lista(gazdi* adatok) {
 		allat* mostAllat = mostGazdi->allatok;
 		while (mostAllat != NULL) {
 			kezeles* mostKez = mostAllat->kezelesek;
-			datumTipus legfrissebb;
+			datumTipus legfrissebb = mostKez->datum;
 			while (mostKez != NULL) {
 				char* mostLeiras = kisbetus(mostKez->leiras);
 				if (strstr(mostLeiras, "veszettseg ellen") != NULL) {

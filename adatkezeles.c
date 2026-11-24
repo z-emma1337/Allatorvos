@@ -100,7 +100,7 @@ void modAdat(gazdi* adatok) {
 	}
 }
 
-void toroladat(gazdi* adatok) {
+void torolAdat(gazdi* adatok) {
 	int kiv = -1;
 	while (kiv != '0') {
 		clear();
@@ -116,7 +116,7 @@ void toroladat(gazdi* adatok) {
 		} while (kiv == '\n');
 		switch (kiv) {
 		case '1':
-			gazdi_torol(adatok);
+			adatok = gazdi_torol(adatok);
 			break;
 		case '2':
 			allat_torol(adatok);
@@ -155,7 +155,7 @@ void adatkezeles(gazdi* adatok) {
 			modAdat(adatok);
 			break;
 		case '3':
-
+			torolAdat(adatok);
 			break;
 		case '0':
 			break;

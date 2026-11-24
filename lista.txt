@@ -1,184 +1,136 @@
 ------------------------
-Gazdi: Nagy Anna
-Datum: 2024.07.29
-Allat: Bodri
-------------------------
-Gazdi: Nagy Anna
-Datum: 2023.11.25
+Gazdi: Kovacs Anna
+Datum: 2025.02.04
 Allat: Morzsi
 ------------------------
-Gazdi: Kovacs Peter
-Datum: 2024.12.05
+Gazdi: Kovacs Anna
+Datum: 2025.02.16
 Allat: Luna
 ------------------------
-Gazdi: Kovacs Peter
-Datum: 2023.06.11
-Allat: Milo
+Gazdi: Nagy Bence
+Datum: 2025.02.28
+Allat: Bodri
+------------------------
+Gazdi: Nagy Bence
+Datum: 2025.03.12
+Allat: Cirmi
 ------------------------
 Gazdi: Toth Dora
-Datum: 2023.12.25
-Allat: Cirmi
-------------------------
-Gazdi: Horvath Eszter
-Datum: 2025.08.02
-Allat: Loki
-------------------------
-Gazdi: Horvath Eszter
-Datum: 2024.12.04
-Allat: Mici
-------------------------
-Gazdi: Varga Bence
-Datum: 2024.06.26
-Allat: Max
-------------------------
-Gazdi: Kiss Lilla
-Datum: 2024.03.29
-Allat: Nala
-------------------------
-Gazdi: Molnar Adam
-Datum: 2024.05.28
-Allat: Tappancs
-------------------------
-Gazdi: Nemeth Zsofia
-Datum: 2024.09.19
-Allat: Rex
-------------------------
-Gazdi: Farkas Daniel
-Datum: 2023.04.17
-Allat: Suti
-------------------------
-Gazdi: Farkas Daniel
-Datum: 2024.04.10
-Allat: Kormi
-------------------------
-Gazdi: Balogh Nora
-Datum: 2024.08.28
-Allat: Picur
-------------------------
-Gazdi: Papp Mate
-Datum: 2024.04.22
-Allat: Felix
-------------------------
-Gazdi: Papp Mate
-Datum: 2024.04.20
-Allat: Samu
-------------------------
-Gazdi: Lakatos Reka
-Datum: 2024.04.03
-Allat: Pihe
-------------------------
-Gazdi: Juhasz Laura
-Datum: 2025.06.03
-Allat: Manka
-------------------------
-Gazdi: Juhasz Laura
-Datum: 2023.09.07
-Allat: Bogyo
-------------------------
-Gazdi: Meszaros Gabor
-Datum: 2023.10.24
-Allat: Mokka
-------------------------
-Gazdi: Olah Fanni
-Datum: 2025.03.14
-Allat: Hektor
-------------------------
-Gazdi: Olah Fanni
-Datum: 2024.06.18
-Allat: Lili
-------------------------
-Gazdi: Simon David
-Datum: 2025.03.16
-Allat: Bodri
-------------------------
-Gazdi: Simon David
-Datum: 2024.04.10
-Allat: Morzsi
-------------------------
-Gazdi: Racz Judit
-Datum: 2025.07.08
-Allat: Luna
-------------------------
-Gazdi: Fekete Levente
-Datum: 2023.01.07
-Allat: Cirmi
-------------------------
-Gazdi: Feher Kata
-Datum: 2025.09.14
+Datum: 2025.03.24
 Allat: Zokni
 ------------------------
-Gazdi: Feher Kata
-Datum: 2024.07.26
+Gazdi: Toth Dora
+Datum: 2025.04.05
+Allat: Mici
+------------------------
+Gazdi: Szabo Mate
+Datum: 2025.04.17
 Allat: Buksi
 ------------------------
-Gazdi: Biro Milan
-Datum: 2024.10.07
-Allat: Loki
-------------------------
-Gazdi: Gulyas Viktoria
-Datum: 2023.12.17
-Allat: Max
-------------------------
-Gazdi: Gulyas Viktoria
-Datum: 2025.07.08
-Allat: Molly
-------------------------
-Gazdi: Ordog Andras
-Datum: 2023.01.22
-Allat: Nala
-------------------------
-Gazdi: Kerekes Emese
-Datum: 2024.10.26
-Allat: Tappancs
-------------------------
-Gazdi: Kerekes Emese
-Datum: 2023.03.19
+Gazdi: Szabo Mate
+Datum: 2025.04.29
 Allat: Pamacs
 ------------------------
-Gazdi: Sipos Kristof
-Datum: 2023.12.10
-Allat: Daisy
+Gazdi: Horvath Eszter
+Datum: 2025.05.11
+Allat: Foltos
 ------------------------
-Gazdi: Sipos Kristof
-Datum: 2025.08.24
-Allat: Rex
+Gazdi: Horvath Eszter
+Datum: 2025.05.23
+Allat: Molly
 ------------------------
-Gazdi: Boros Bianka
-Datum: 2024.09.14
-Allat: Suti
-------------------------
-Gazdi: Kelemen Tamas
-Datum: 2025.09.20
-Allat: Picur
-------------------------
-Gazdi: Kelemen Tamas
-Datum: 2025.07.13
+Gazdi: Varga David
+Datum: 2025.06.04
 Allat: Bruno
 ------------------------
-Gazdi: Antal Noemi
-Datum: 2024.05.22
-Allat: Felix
+Gazdi: Varga David
+Datum: 2025.06.16
+Allat: Mancs
 ------------------------
-Gazdi: Antal Noemi
-Datum: 2023.04.17
+Gazdi: Kiss Lilla
+Datum: 2025.06.28
+Allat: Lili
+------------------------
+Gazdi: Kiss Lilla
+Datum: 2025.06.27
+Allat: Max
+------------------------
+Gazdi: Molnar Marcell
+Datum: 2025.07.09
+Allat: Nala
+------------------------
+Gazdi: Molnar Marcell
+Datum: 2025.07.21
+Allat: Picur
+------------------------
+Gazdi: Nemeth Zsofia
+Datum: 2025.08.02
 Allat: Samu
 ------------------------
-Gazdi: Vincze Csilla
-Datum: 2024.03.08
-Allat: Zara
+Gazdi: Nemeth Zsofia
+Datum: 2025.08.14
+Allat: Bella
 ------------------------
-Gazdi: Vincze Csilla
-Datum: 2025.05.01
-Allat: Teddy
+Gazdi: Farkas Adam
+Datum: 2025.08.26
+Allat: Tappancs
 ------------------------
-Gazdi: Barta Roland
-Datum: 2023.03.20
-Allat: Bogyo
+Gazdi: Farkas Adam
+Datum: 2025.09.07
+Allat: Charlie
 ------------------------
-Gazdi: Kadar Ildiko
-Datum: 2023.02.03
-Allat: Mokka
+Gazdi: Balogh Nora
+Datum: 2025.09.19
+Allat: Maja
 ------------------------
-Gazdi: Kadar Ildiko
-Datum: 2023.12.21
-Allat: Csoki
+Gazdi: Balogh Nora
+Datum: 2025.10.01
+Allat: Rex
+------------------------
+Gazdi: Papp Balazs
+Datum: 2025.10.13
+Allat: Mimi
+------------------------
+Gazdi: Papp Balazs
+Datum: 2025.10.25
+Allat: Fifi
+------------------------
+Gazdi: Lakatos Reka
+Datum: 2025.11.06
+Allat: Rocky
+------------------------
+Gazdi: Lakatos Reka
+Datum: 2025.11.18
+Allat: Pihe
+------------------------
+Gazdi: Takacs Peter
+Datum: 2025.11.17
+Allat: Kormi
+------------------------
+Gazdi: Lukacs Csilla
+Datum: 2025.02.22
+Allat: Pityu
+------------------------
+Gazdi: Lukacs Csilla
+Datum: 2025.03.06
+Allat: Mici2
+------------------------
+Gazdi: Biro Boglarka
+Datum: 2025.03.18
+Allat: Kira
+------------------------
+Gazdi: Biro Boglarka
+Datum: 2025.03.30
+Allat: Boris
+------------------------
+Gazdi: Katona Zoltan
+Datum: 2025.04.11
+Allat: Lencse
+------------------------
+Gazdi: Katona Zoltan
+Datum: 2025.04.10
+Allat: Morzsa2
+------------------------
+Gazdi: asd assssd
+Datum: 1234.12.12
+Allat: asd
