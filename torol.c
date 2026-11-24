@@ -7,7 +7,7 @@
 #include <ctype.h>
 #include <string.h>
 
-gazdi* gazdi_torol(gazdi* adatok) {
+void gazdi_torol(gazdi* adatok) {
 	int sorSzam = -1;
 	gazdi* torlendo = NULL;
 	while (sorSzam == -1) {
@@ -62,7 +62,6 @@ gazdi* gazdi_torol(gazdi* adatok) {
 	torlendo->kov = NULL;
 	freeG(torlendo);
 	Mentes(adatok);
-	return adatok;
 
 
 }
