@@ -66,9 +66,9 @@ gazdi* gazdi_torol(gazdi* adatok) {
 
 
 }
-void allat_torol(gazdi* adatok) {
-
+gazdi* allat_torol(gazdi* adatok) {
+	return adatok;
 }
-void kezeles_torol(gazdi* adatok) {
-
+gazdi* kezeles_torol(gazdi* adatok) {
+	return adatok;
 }

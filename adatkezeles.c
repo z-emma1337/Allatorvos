@@ -120,10 +120,10 @@ gazdi* torolAdat(gazdi* adatok) {
 			adatok = gazdi_torol(adatok);
 			break;
 		case '2':
-			allat_torol(adatok);
+			adatok = allat_torol(adatok);
 			break;
 		case '3':
-			kezeles_torol(adatok);
+			adatok = kezeles_torol(adatok);
 			break;
 		case '0':
 			break;
