@@ -1,4 +1,5 @@
 #pragma once
 #include "adatbazis.h"
-void adatkezeles(gazdi* adatok);
+gazdi* torolAdat(gazdi* adatok);
+gazdi* adatkezeles(gazdi* adatok);
 void Mentes(gazdi* adatok);

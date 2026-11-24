@@ -1,39 +1,3 @@
-G;Horvath Eszter;06301000004
-A;Foltos;nyul;2025.04.08
-K;2025.05.11;Fereghajtas
-K;2025.06.27;Allapotfelmeres
-K;2025.08.13;Szemvizsgalat
-A;Molly;tengerimalac;2025.04.19
-K;2025.05.23;Allapotfelmeres
-K;2025.07.09;Szemvizsgalat
-K;2025.08.25;Karmok vagasa
-G;Varga David;06501000005
-A;Bruno;papagaj;2025.04.30
-K;2025.06.04;Szemvizsgalat
-K;2025.07.21;Karmok vagasa
-K;2025.09.06;Altalanos vizsgalat
-A;Mancs;teknos;2025.05.11
-K;2025.06.16;Karmok vagasa
-K;2025.08.02;Altalanos vizsgalat
-K;2025.09.18;Vedooltas
-G;Kiss Lilla;06701000006
-A;Lili;kutya;2025.05.22
-K;2025.06.28;Altalanos vizsgalat
-K;2025.08.14;Vedooltas
-K;2025.09.30;Fulfertozes kezelese
-A;Max;macska;2025.06.02
-K;2025.06.27;Vedooltas
-K;2025.08.13;Fulfertozes kezelese
-K;2025.09.29;Fogko eltavolitas
-G;Molnar Marcell;06901000007
-A;Nala;nyul;2025.06.13
-K;2025.07.09;Fulfertozes kezelese
-K;2025.08.25;Fogko eltavolitas
-K;2025.10.11;Borvizsgalat
-A;Picur;tengerimalac;2025.06.24
-K;2025.07.21;Fogko eltavolitas
-K;2025.09.06;Borvizsgalat
-K;2025.10.23;Kontroll vizsgalat
 G;Nemeth Zsofia;06301000008
 A;Samu;papagaj;2025.07.05
 K;2025.08.02;Borvizsgalat
@@ -61,15 +25,6 @@ A;Rex;tengerimalac;2025.08.29
 K;2025.10.01;Allapotfelmeres
 K;2025.11.17;Szemvizsgalat
 K;2026.01.03;Karmok vagasa
-G;Papp Balazs;06901000011
-A;Mimi;papagaj;2025.09.09
-K;2025.10.13;Szemvizsgalat
-K;2025.11.29;Karmok vagasa
-K;2026.01.15;Altalanos vizsgalat
-A;Fifi;teknos;2025.09.20
-K;2025.10.25;Karmok vagasa
-K;2025.12.11;Altalanos vizsgalat
-K;2026.01.27;Vedooltas
 G;Lakatos Reka;06301000012
 A;Rocky;kutya;2025.10.01
 K;2025.11.06;Altalanos vizsgalat

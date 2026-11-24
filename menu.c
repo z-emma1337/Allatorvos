@@ -3,6 +3,7 @@
 #include "menu.h"
 #include <stdio.h>
 #include <ctype.h>
+#include "adatkezeles.h"
 #include <string.h>
 // visszaad egy lefoglalt méretű karakter pointert csupa kisbetűkkel a nagybetűs hibák elkerülése érdekében
 char* kisbetus(char szoveg[]) {
@@ -60,7 +61,7 @@ void kereses_menu(gazdi* adatok) {
 	}
 }
 //paramétere a fő változó, kiírja a menüt, kezeli a kiválasztást
-void menu_init(gazdi* adatok) {
+gazdi* menu_init(gazdi* adatok) {
 	int kiv = -1;
 	while (kiv != '0') {
 		clear();
@@ -82,7 +83,7 @@ void menu_init(gazdi* adatok) {
 			lista(adatok);
 			break;
 		case '3':
-			adatkezeles(adatok);
+			adatok = adatkezeles(adatok);
 			break;
 		case '0':
 			break;
@@ -90,7 +91,7 @@ void menu_init(gazdi* adatok) {
 			printf("Hiba! A menupont szamat valaszd!");
 		}
 	}
-
+	return adatok;
 
 
 

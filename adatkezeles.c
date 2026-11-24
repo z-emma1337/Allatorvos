@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include "torol.h"
 
 void Mentes(gazdi* adatok) {
 	FILE* f = fopen("adatok.txt", "w");
@@ -100,7 +101,7 @@ void modAdat(gazdi* adatok) {
 	}
 }
 
-void torolAdat(gazdi* adatok) {
+gazdi* torolAdat(gazdi* adatok) {
 	int kiv = -1;
 	while (kiv != '0') {
 		clear();
@@ -130,10 +131,11 @@ void torolAdat(gazdi* adatok) {
 			printf("Hiba! A menupont szamat valaszd!");
 		}
 	}
+	return adatok;
 }
 
 
-void adatkezeles(gazdi* adatok) {
+gazdi* adatkezeles(gazdi* adatok) {
 	int kiv = -1;
 	while (kiv != '0') {
 		clear();
@@ -155,7 +157,7 @@ void adatkezeles(gazdi* adatok) {
 			modAdat(adatok);
 			break;
 		case '3':
-			torolAdat(adatok);
+			adatok = torolAdat(adatok);
 			break;
 		case '0':
 			break;
@@ -163,4 +165,5 @@ void adatkezeles(gazdi* adatok) {
 			printf("Hiba! A menupont szamat valaszd!");
 		}
 	}
+	return adatok;
 }
