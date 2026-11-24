@@ -1,21 +1,3 @@
-G;Nemeth Zsofia;06301000008
-A;Samu;papagaj;2025.07.05
-K;2025.08.02;Borvizsgalat
-K;2025.09.18;Kontroll vizsgalat
-K;2025.11.04;Vitaminpotlas
-A;Bella;teknos;2025.07.16
-K;2025.08.14;Kontroll vizsgalat
-K;2025.09.30;Vitaminpotlas
-K;2025.11.16;Sebkezeles
-G;Farkas Adam;06501000009
-A;Tappancs;kutya;2025.07.27
-K;2025.08.26;Vitaminpotlas
-K;2025.10.12;Sebkezeles
-K;2025.11.28;Fereghajtas
-A;Charlie;macska;2025.08.07
-K;2025.09.07;Sebkezeles
-K;2025.10.24;Fereghajtas
-K;2025.12.10;Allapotfelmeres
 G;Balogh Nora;06701000010
 A;Maja;nyul;2025.08.18
 K;2025.09.19;Fereghajtas
@@ -107,13 +89,8 @@ K;2026.05.03;Kontroll vizsgalat
 K;2026.06.19;Vitaminpotlas
 K;2026.08.05;Sebkezeles
 G;Ordog Levente;06501000021
-A;Hektor;kutya;2026.04.17
-K;2026.05.15;Vitaminpotlas
-K;2026.07.01;Sebkezeles
-K;2026.08.17;Fereghajtas
 A;Zara;macska;2026.04.28
 K;2026.05.27;Sebkezeles
-K;2026.07.13;Fereghajtas
 K;2026.08.29;Allapotfelmeres
 G;Boros Viktoria;06701000022
 A;Bambi;nyul;2026.05.09
@@ -163,61 +140,4 @@ K;2026.12.14;Sebkezeles
 G;Vincze Kristof;06901000027
 A;Zizi;kutya;2026.08.27
 K;2026.09.23;Vitaminpotlas
-K;2026.11.09;Sebkezeles
-K;2026.12.26;Fereghajtas
-A;Rudi;macska;2026.09.07
-K;2026.10.05;Sebkezeles
-K;2026.11.21;Fereghajtas
-K;2027.01.07;Allapotfelmeres
-G;Barta Noemi;06301000028
-A;Misu;nyul;2026.09.18
-K;2026.10.17;Fereghajtas
-K;2026.12.03;Allapotfelmeres
-K;2027.01.19;Szemvizsgalat
-A;Bora;tengerimalac;2026.09.29
-K;2026.10.29;Allapotfelmeres
-K;2026.12.15;Szemvizsgalat
-K;2027.01.31;Karmok vagasa
-G;Antal Mark;06501000029
-A;Tomi;papagaj;2026.10.10
-K;2026.11.10;Szemvizsgalat
-K;2026.12.27;Karmok vagasa
-K;2027.02.12;Altalanos vizsgalat
-A;Gomboc;teknos;2026.10.21
-K;2026.11.22;Karmok vagasa
-K;2027.01.08;Altalanos vizsgalat
-K;2027.02.24;Vedooltas
-G;Lukacs Csilla;06701000030
-A;Pityu;kutya;2025.01.20
-K;2025.02.22;Altalanos vizsgalat
-K;2025.04.10;Vedooltas
-K;2025.05.27;Fulfertozes kezelese
-A;Mici2;macska;2025.01.31
-K;2025.03.06;Vedooltas
-K;2025.04.22;Fulfertozes kezelese
-K;2025.06.08;Fogko eltavolitas
-G;Biro Boglarka;06901000031
-A;Kira;nyul;2025.02.11
-K;2025.03.18;Fulfertozes kezelese
-K;2025.05.04;Fogko eltavolitas
-K;2025.06.20;Borvizsgalat
-A;Boris;tengerimalac;2025.02.22
-K;2025.03.30;Fogko eltavolitas
-K;2025.05.16;Borvizsgalat
-K;2025.07.02;Kontroll vizsgalat
-G;Katona Zoltan;06301000032
-A;Lencse;papagaj;2025.03.05
-K;2025.04.11;Borvizsgalat
-K;2025.05.28;Kontroll vizsgalat
-K;2025.07.14;Vitaminpotlas
-A;Morzsa2;teknos;2025.03.16
-K;2025.04.10;Kontroll vizsgalat
-K;2025.05.27;Vitaminpotlas
-K;2025.07.13;Sebkezeles
-G;asd assssd;1234
-A;asd;asd;1234.12.12
-K;1234.12.12;asdadsdsdasddddasd
-K;1234.01.12;dghhssddasa
-G;Kiss Geza;06701234567
-A;Pompom;Onemetjuhasz;2026.09.12
-K;2026.12.12;Kontroll
+K;2026.11.09;Sebk
