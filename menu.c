@@ -11,7 +11,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-// visszaad egy lefoglalt méretű karakter pointert csupa kisbetűkkel a nagybetűs hibák elkerülése érdekében
+//kisbetus: visszaad egy lefoglalt méretű karakter pointert csupa kisbetűkkel a nagybetűs hibák elkerülése érdekében
 char* kisbetus(char szoveg[]) {
 	char* re = malloc(strlen(szoveg) + 1);
 	if (re == NULL) {
@@ -25,7 +25,7 @@ char* kisbetus(char szoveg[]) {
 	return re;
 }
 
-//törli a terminál tartalmát külön definiálva windows és linuxra
+//clear: törli a terminál tartalmát külön definiálva windows és linuxra
 void clear() {
 #ifdef _WIN32
 	system("cls");
@@ -34,7 +34,8 @@ void clear() {
 #endif
 }
 
-//paramétere a fő változó, kiírja a keresés menüt, kezeli a kiválasztást
+//kereses_menu: megkapja a fejgazdit, visszatérési érték nélkül kiírja a keresés menüt és kezeli a kiválasztást
+//meghívja a g-a-k_kereses-eket
 void kereses_menu(gazdi* adatok) {
 	int kiv = -1;
 	while (kiv != '0') {
@@ -66,7 +67,8 @@ void kereses_menu(gazdi* adatok) {
 		}
 	}
 }
-//paramétere a fő változó, kiírja a menüt, kezeli a kiválasztást
+//megkapja a fejgazdit,a "módosított" fejgazdival tér vissza és kiírja a fő menüt
+//meghívja  kereses_menut, listát és az adatkezelőt
 gazdi* menu_init(gazdi* adatok) {
 	int kiv = -1;
 	while (kiv != '0') {

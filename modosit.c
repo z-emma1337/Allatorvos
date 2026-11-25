@@ -7,10 +7,14 @@
 #include <string.h>
 #include <stdlib.h>
 
+/*
+* gazdi_mod: megkapja a fejgazdit és visszatérési érték nélkül elvégzi egy gazdi módosítását
+*/
 void gazdi_mod(gazdi* adatok) {
 	int kiv = -1;
 	while (kiv != '0') {
 		clear();
+		//Gazdi keresése telefonszám alapján
 		printf("/// GAZDI MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
 		char telefon[12];
 		printf("Gazdi telefonszama: ");
@@ -37,7 +41,7 @@ void gazdi_mod(gazdi* adatok) {
 		}
 		else {
 
-
+			//Vezetéknév módosítása
 			clear();
 			printf("/// GAZDI MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
 			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
@@ -54,6 +58,7 @@ void gazdi_mod(gazdi* adatok) {
 			}
 			getchar();
 
+			//Keresztnév módosítása
 			clear();
 			printf("/// GAZDI MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
 			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
@@ -70,6 +75,7 @@ void gazdi_mod(gazdi* adatok) {
 			}
 			getchar();
 
+			//telefonszám módosítása
 			clear();
 			printf("/// GAZDI MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
 			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
@@ -88,6 +94,7 @@ void gazdi_mod(gazdi* adatok) {
 			}
 			getchar();
 
+			//mentés vagy kilépés
 			clear();
 			printf("/// GAZDI MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
 			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
@@ -120,9 +127,15 @@ void gazdi_mod(gazdi* adatok) {
 		}
 	}
 }
+
+
+/*
+* allat_mod: megkapja a fejgazdit és visszatérési érték nélkül elvégzi egy állat módosítását
+*/
 void allat_mod(gazdi* adatok) {
 	int kiv = -1;
 	while (kiv != '0') {
+		//gazdi keresése telefonszám szerint
 		clear();
 		printf("/// ALLAT MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
 		char telefon[12];
@@ -150,7 +163,7 @@ void allat_mod(gazdi* adatok) {
 		}
 		else {
 
-
+			//Állat keresése név szerint
 			clear();
 			printf("/// ALLAT MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
 			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
@@ -184,6 +197,8 @@ void allat_mod(gazdi* adatok) {
 
 			}
 			else {
+
+				//név módosítása
 				clear();
 				printf("/// ALLAT MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
 				printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
@@ -204,6 +219,7 @@ void allat_mod(gazdi* adatok) {
 				}
 				getchar();
 
+				//Faj módosítása
 				clear();
 				printf("/// ALLAT MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
 				printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
@@ -225,6 +241,7 @@ void allat_mod(gazdi* adatok) {
 				}
 				getchar();
 
+				//Oltási dátum módosítása
 				clear();
 				printf("/// ALLAT MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
 				printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
@@ -248,6 +265,7 @@ void allat_mod(gazdi* adatok) {
 				}
 				getchar();
 
+				//mentés / kilépés
 				clear();
 				printf("/// ALLAT MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
 				printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
@@ -287,10 +305,15 @@ void allat_mod(gazdi* adatok) {
 	}
 
 }
+
+/*
+* kezeles_mod: megkapja a fejgazdit és visszatérési érték nélkül módosít egy kezelést
+*/
 void kezeles_mod(gazdi* adatok) {
 	int kiv = -1;
 	while (kiv != '0') {
 		clear();
+		//gazdi keresés telefonszám szerint
 		printf("/// KEZELES MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
 		char telefon[12];
 		printf("Gazdi telefonszama: ");
@@ -317,7 +340,7 @@ void kezeles_mod(gazdi* adatok) {
 		}
 		else {
 
-
+			//állat keresés név szerint
 			clear();
 			printf("/// KEZELES MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
 			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
@@ -353,6 +376,8 @@ void kezeles_mod(gazdi* adatok) {
 
 			}
 			else {
+
+				//állat kezeléseinek sorszámos felsorolása
 				clear();
 				printf("/// KEZELES MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
 				printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
@@ -386,6 +411,7 @@ void kezeles_mod(gazdi* adatok) {
 							printf("[%d] | %04d.%02d.%02d | %s\n", i, kezDatum.ev, kezDatum.honap, kezDatum.nap, felsorol->leiras);
 							felsorol = felsorol->kov;
 						}
+						//sorszám bekérése
 						printf("Modositas: ");
 						char be[10];
 						scanf("%s", be);
@@ -413,6 +439,8 @@ void kezeles_mod(gazdi* adatok) {
 
 					}
 					clear();
+					//kiválasztott kezelés
+					//dátum módosítása
 					printf("/// KEZELES MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
 					datumTipus modDatum = modositando->datum;
 					printf("Datum: %04d.%02d.%02d\n", modDatum.ev, modDatum.honap, modDatum.nap);
@@ -430,6 +458,7 @@ void kezeles_mod(gazdi* adatok) {
 					}
 					getchar();
 
+					//leírás módosítása
 					clear();
 					printf("/// KEZELES MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
 					printf("Datum: %04d.%02d.%02d\n", modDatum.ev, modDatum.honap, modDatum.nap);
@@ -447,6 +476,7 @@ void kezeles_mod(gazdi* adatok) {
 					}
 					getchar();
 
+					//mentés / kilépés
 					clear();
 					printf("/// KEZELES MODOSITASA [0] Kilepes [-] Nem valtozik///\n");
 					printf("Datum: %04d.%02d.%02d\n", modDatum.ev, modDatum.honap, modDatum.nap);

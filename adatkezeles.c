@@ -10,7 +10,10 @@
 #include <stdlib.h>
 
 
-
+/*
+* Mentés: megkapja a fej gazdit és frissíti az adatok.txt-t visszatérési érték nélkül
+* Megnyitja olvasásra a fájlt, nullcheck majd végig megy a láncolt listán miközben beleírja a benne lévő adatsorokat a fájlba
+*/
 void Mentes(gazdi* adatok) {
 	FILE* f = fopen("adatok.txt", "w");
 
@@ -40,6 +43,11 @@ void Mentes(gazdi* adatok) {
 
 	fclose(f);
 }
+
+/*
+* ujAdat: megkapja a fej gazdit és visszatérési érték nélkül felépíti az új adat felvevő menüt
+* 3 menüpontot biztosít új G A K felvételének, switchel választ, meghívja a megfelelő függvényeket
+*/
 
 void ujAdat(gazdi* adatok) {
 	int kiv = -1;
@@ -72,7 +80,10 @@ void ujAdat(gazdi* adatok) {
 		}
 	}
 }
-
+/*
+* modAdat: megkapja a fej gazdit és visszatérési érték nélkül felépíti az adatmodosito menüt
+* 3 menüpontot biztosít a G A K modosításának, switchel választ, meghívja a megfelelő függvényeket
+*/
 void modAdat(gazdi* adatok) {
 	int kiv = -1;
 	while (kiv != '0') {
@@ -104,7 +115,10 @@ void modAdat(gazdi* adatok) {
 		}
 	}
 }
-
+/*
+* torolAdat: megkapja a fej gazdit és visszaadja a módosított fej gazdit, felépíti az adattörlő menüt
+* 3 menüpontot biztosít a G A K törlésének, switchel választ, meghívja a megfelelő függvényeket
+*/
 gazdi* torolAdat(gazdi* adatok) {
 	int kiv = -1;
 	while (kiv != '0') {
@@ -137,6 +151,12 @@ gazdi* torolAdat(gazdi* adatok) {
 	}
 	return adatok;
 }
+
+/*
+* adatkezeles: megkapja a fej gazdit és vissza adja a módosított fej gazdit
+* kirajzol egy menüt, hogy milyen módon akarjuk az adatbázist módosítani
+* a fenti függvények meghívásával felépíti a switches menürendszert
+*/
 
 
 gazdi* adatkezeles(gazdi* adatok) {

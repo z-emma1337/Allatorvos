@@ -6,9 +6,12 @@
 #include <string.h>
 #include <stdlib.h>
 
-//Kiírja a találatokat, megkapja a beírt szöveget és a fő változót
-// külön változóba menti a kisbetűs kereszt- és vezetéknevet, összehasonlít, kiír
-//lépteti a láncszemeket, majd a végén felszabadít 
+
+/*
+* keresett_g:gazdira keres, megkapja a felhasználó keresését és a fejgazdit, nincs visszatérési értéke.
+* végig megy az adatbázis gazdijain amíg egyezést nem talál a keresés és gazdi név között
+* kiírja keresésnek megfelelt gazdik összes adatát
+*/
 void keresett_g(char* ker, gazdi* adatok) {
 	clear();
 	printf("/// TALALATOK %s /// [ENTER] Visszateres\n", ker);
@@ -43,7 +46,10 @@ void keresett_g(char* ker, gazdi* adatok) {
 	getchar();
 	getchar();
 }
-// paramétere az fő változó, ha nem 0-át ír be, meghívja a keresett függvényt
+/*
+* gazdi_kereses: megkapja a fejgazdit, nincs visszatérési érték
+* elkéri a felhasználótól, hogy melyik gazdira akar keresni majd meghívja a keresett_g-t
+*/
 void gazdi_kereses(gazdi* adatok) {
 	char ker[50];
 	while (1) {
@@ -56,8 +62,6 @@ void gazdi_kereses(gazdi* adatok) {
 			break;
 		}
 		keresett_g(ker, adatok);
-
-
 
 	}
 }

@@ -7,10 +7,13 @@
 #include <string.h>
 #include <stdlib.h>
 
-
+/*
+* gazdi_hozzaad: megkapja a fejgazdit és visszatérési érték nélkül létre hoz egy új gazdit
+*/
 void gazdi_hozzaad(gazdi* adatok) {
 	int kiv = -1;
 	while (kiv != '0') {
+		//új vezetéknév bekérése
 		nevTipus nev;
 		clear();
 		printf("/// UJ GAZDI HOZZAADASA [0] Kilepes ///\n");
@@ -21,6 +24,8 @@ void gazdi_hozzaad(gazdi* adatok) {
 		}
 		getchar();
 
+
+		//új keresztnév bekérése
 		clear();
 		printf("/// UJ GAZDI HOZZAADASA [0] Kilepes ///\n");
 		printf("Vezeteknev: %s\n", nev.vezetek);
@@ -31,6 +36,8 @@ void gazdi_hozzaad(gazdi* adatok) {
 		}
 		getchar();
 
+
+		//új telefonszám bekérése
 		clear();
 		printf("/// UJ GAZDI HOZZAADASA [0] Kilepes ///\n");
 		printf("Nev: %s %s\n", nev.vezetek, nev.kereszt);
@@ -42,7 +49,7 @@ void gazdi_hozzaad(gazdi* adatok) {
 		}
 		getchar();
 
-
+		//Mentés vagy kilépés
 		clear();
 		printf("/// UJ GAZDI HOZZAADASA [0] Kilepes ///\n");
 		printf("Nev: %s %s\n", nev.vezetek, nev.kereszt);
@@ -72,9 +79,14 @@ void gazdi_hozzaad(gazdi* adatok) {
 	}
 }
 
+
+/*
+* allat_hozzaad: megkapja a fejgazdit és visszatérési érték nélkül létre hoz egy új allatok
+*/
 void allat_hozzaad(gazdi* adatok) {
 	int kiv = -1;
 	while (kiv != '0') {
+		//gazdi keresése telefonszám alapján
 		clear();
 		printf("/// UJ ALLAT HOZZAADASA [0] Kilepes///\n");
 		char telefon[20];
@@ -102,7 +114,7 @@ void allat_hozzaad(gazdi* adatok) {
 		}
 		else {
 
-
+			//új állatnév
 			clear();
 			printf("/// UJ ALLAT HOZZAADASA [0] Kilepes///\n");
 			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
@@ -116,6 +128,8 @@ void allat_hozzaad(gazdi* adatok) {
 			}
 			getchar();
 
+
+			//új állatfaj
 			clear();
 			printf("/// UJ ALLAT HOZZAADASA [0] Kilepes///\n");
 			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
@@ -130,6 +144,7 @@ void allat_hozzaad(gazdi* adatok) {
 			}
 			getchar();
 
+			//új oltási dátum
 			clear();
 			printf("/// UJ ALLAT HOZZAADASA [0] Kilepes///\n");
 			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
@@ -144,6 +159,7 @@ void allat_hozzaad(gazdi* adatok) {
 				break;
 			}
 
+			//mentés vagy kilépés
 			clear();
 			printf("/// UJ ALLAT HOZZAADASA [0] Kilepes///\n");
 			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
@@ -188,10 +204,14 @@ void allat_hozzaad(gazdi* adatok) {
 	}
 }
 
+/*
+* kezeles_hozzaad: megkapja a fejgazdit és visszatérési érték nélkül létre hoz egy új kezelést
+*/
 void kezeles_hozzaad(gazdi* adatok) {
 	int kiv = -1;
 	while (kiv != '0') {
 		clear();
+		//gazdi keresése telefonszám alapján
 		printf("/// UJ KEZELES HOZZAADASA [0] Kilepes ///\n");
 		char telefon[20];
 		printf("Gazdi telefonszama: ");
@@ -218,7 +238,7 @@ void kezeles_hozzaad(gazdi* adatok) {
 		}
 		else {
 
-
+			//állat keresése név szerint
 			clear();
 			printf("/// UJ KEZELES HOZZAADASA [0] Kilepes ///\n");
 			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
@@ -254,7 +274,7 @@ void kezeles_hozzaad(gazdi* adatok) {
 			else {
 
 
-
+				//új kezelés leírása
 				clear();
 				printf("/// UJ KEZELES HOZZAADASA [0] Kilepes ///\n");
 				printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
@@ -270,6 +290,8 @@ void kezeles_hozzaad(gazdi* adatok) {
 				}
 				getchar();
 
+
+				//új kezelés dátuma
 				clear();
 				printf("/// UJ KEZELES HOZZAADASA [0] Kilepes ///\n");
 				printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
@@ -286,6 +308,8 @@ void kezeles_hozzaad(gazdi* adatok) {
 				}
 				getchar();
 
+
+				//mentés vagy kilépés
 				clear();
 				printf("/// UJ KEZELES HOZZAADASA [0] Kilepes ///\n");
 				printf("Telefonszam: %s\n", mostGazdi->telefon);

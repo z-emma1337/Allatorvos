@@ -6,6 +6,11 @@
 #include <string.h>
 #include <stdlib.h>
 
+/*
+* keresett_k:kezelésre keres, megkapja a felhasználó keresését és a fejgazdit, nincs visszatérési értéke.
+* végig megy az adatbázis állatain amíg egyezést nem talál a keresés és kezelés leírás között
+* kiírja keresésnek megfelelt kezelések összes adatát
+*/
 
 void keresett_k(char* ker, gazdi* adatok) {
 	clear();
@@ -45,6 +50,10 @@ void keresett_k(char* ker, gazdi* adatok) {
 	getchar();
 }
 
+/*
+* kez_kereses: megkapja a fejgazdit, nincs visszatérési érték
+* elkéri a felhasználótól, hogy melyik kezelésre akar keresni majd meghívja a keresett_k-t
+*/
 void kez_kereses(gazdi* adatok) {
 	char ker[50];
 	while (1) {

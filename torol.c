@@ -7,7 +7,9 @@
 #include <string.h>
 #include <stdlib.h>
 
+//gazdi_torol: megkapja a fej gazdit és visszatér a módosított fejgazdival, elvégzi a gazdi törlését
 gazdi* gazdi_torol(gazdi* adatok) {
+	//gazdik sorszámos felsorolása
 	clear();
 	int sorSzam = -1;
 	gazdi* torlendo = NULL;
@@ -20,6 +22,7 @@ gazdi* gazdi_torol(gazdi* adatok) {
 			printf("[%d] | %s %s | %s\n", i, felsorol->nev.vezetek, felsorol->nev.kereszt, felsorol->telefon);
 			felsorol = felsorol->kov;
 		}
+		//sorszám bekérése
 		printf("Torles: ");
 		char be[10];
 		scanf("%s", be);
@@ -47,7 +50,7 @@ gazdi* gazdi_torol(gazdi* adatok) {
 			getchar();
 		}
 	}
-	
+	//listaelem törlése
 	gazdi* elozo = NULL;
 	gazdi* keres = adatok;
 
@@ -69,12 +72,16 @@ gazdi* gazdi_torol(gazdi* adatok) {
 
 
 }
+
+//allat_torol: megkapja a fej gazdit és visszatér a módosított fejgazdival, elvégzi az állat törlését
 gazdi* allat_torol(gazdi* adatok) {
+
 	int sorSzam = -1;
 	allat* torlendo = NULL;
 	gazdi* mostGazdi = NULL;
 
 	while (sorSzam == -1) {
+		//gazdi keresése telefonszám alapján
 		clear();
 		printf("/// ALLAT TORLESE [0] Kilepes ///\n");
 		char telefon[12];
@@ -107,12 +114,14 @@ gazdi* allat_torol(gazdi* adatok) {
 			getchar();
 		}
 		else {
+			//állatok sorszámos felsorolása
 			printf("Allatok:\n");
 			allat* felsorol = mostGazdi->allatok;
 			for (int i = 1; felsorol != NULL; i++) {
 				printf("[%d] | %s | %s\n", i, felsorol->nev, felsorol->faj);
 				felsorol = felsorol->kov;
 			}
+			//sorszám bekérése
 			printf("Torles: ");
 			char be[10];
 			scanf("%s", be);
@@ -122,7 +131,6 @@ gazdi* allat_torol(gazdi* adatok) {
 			if (valasztas == 0) {
 				return adatok;
 			}
-
 			allat* keres_a = mostGazdi->allatok;
 			for (int i = 1; keres_a != NULL && torlendo == NULL; i++) {
 				if (valasztas == i) {
@@ -139,6 +147,7 @@ gazdi* allat_torol(gazdi* adatok) {
 			}
 		}
 	}
+	//listaelem törlése
 
 	allat* elozo = NULL;
 	allat* keres = mostGazdi->allatok;
@@ -158,11 +167,15 @@ gazdi* allat_torol(gazdi* adatok) {
 	Mentes(adatok);
 	return adatok;
 }
+
+//kezeles_torol: megkapja a fej gazdit és visszatér a módosított fejgazdival, elvégzi a kezelés törlését
+
 gazdi* kezeles_torol(gazdi* adatok) {
 	gazdi* mostGazdi = NULL;
 	allat* mostAllat = NULL;
 
 	while (mostAllat == NULL) {
+		//gazdi keresés telefonszám szerint
 		clear();
 		printf("/// KEZELES TORLESE [0] Kilepes ///\n");
 		char telefon[12];
@@ -195,6 +208,7 @@ gazdi* kezeles_torol(gazdi* adatok) {
 			getchar();
 		}
 		else {
+			//állat keresés név szerint
 			clear();
 			printf("/// KEZELES TORLESE [0] Kilepes ///\n");
 			printf("Gazdi neve: %s %s\n", mostGazdi->nev.vezetek, mostGazdi->nev.kereszt);
@@ -239,6 +253,7 @@ gazdi* kezeles_torol(gazdi* adatok) {
 	int sorSzam = -1;
 	kezeles* torlendo = NULL;
 	while (sorSzam == -1) {
+		//kezelések sorszámos felsorolása
 		clear();
 		printf("Kezelesek: [0] Kilepes\n");
 		kezeles* felsorol = mostAllat->kezelesek;
@@ -247,6 +262,7 @@ gazdi* kezeles_torol(gazdi* adatok) {
 			printf("[%d] | %04d.%02d.%02d | %s\n", i, kezDatum.ev, kezDatum.honap, kezDatum.nap, felsorol->leiras);
 			felsorol = felsorol->kov;
 		}
+		//sorszám bekérése
 		printf("Torles: ");
 		char be[10];
 		scanf("%s", be);
@@ -270,7 +286,7 @@ gazdi* kezeles_torol(gazdi* adatok) {
 			getchar();
 		}
 	}
-
+	//listaelem törlése
 	kezeles* elozo = NULL;
 	kezeles* keres = mostAllat->kezelesek;
 

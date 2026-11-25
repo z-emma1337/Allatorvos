@@ -7,6 +7,11 @@
 #include <stdlib.h>
 
 
+/*
+* keresett_a:állatra keres, megkapja a felhasználó keresését és a fejgazdit, nincs visszatérési értéke.
+* végig megy az adatbázis állatain amíg egyezést nem talál a keresés és állatnév között
+* kiírja keresésnek megfelelt állatok összes adatát
+*/
 void keresett_a(char* ker, gazdi* adatok) {
 	clear();
 	printf("/// TALALATOK %s /// [ENTER] Visszateres\n", ker);
@@ -46,7 +51,10 @@ void keresett_a(char* ker, gazdi* adatok) {
 	getchar();
 	getchar();
 }
-
+/*
+* allat_kereses: megkapja a fejgazdit, nincs visszatérési érték
+* elkéri a felhasználótól, hogy melyik állatra akar keresni majd meghívja a keresett_a-t
+*/
 void allat_kereses(gazdi* adatok) {
 	char ker[50];
 	while (1) {
