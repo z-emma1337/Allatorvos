@@ -146,3 +146,4 @@ A;Kiki;Kiskutya;2023.01.30
 K;2001.01.01;asdassaas asdass as
 G;asd asd;12345678765
 G;asdssads assad;1234
+A;Snuffy;nyuszi;2024.12.08

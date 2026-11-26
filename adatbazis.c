@@ -5,7 +5,7 @@
 #include <string.h>
 /*
 ujGazdi: paraméterei: névtípus, string telefonszám, visszaad egy gazdit.
-Dinamikusan lefoglalja az új gazdi méretét, majd a paraméterek segítségével létrehozza az új gazdit
+Dinamikusan lefoglalja az új gazdi területét, majd a paraméterek segítségével létrehozza az új gazdit
 A maradék paraméterek nullpointerek.
 */
 gazdi* ujGazdi(nevTipus nev, char telefon[]) { //pointer "láncszem"
@@ -22,7 +22,7 @@ gazdi* ujGazdi(nevTipus nev, char telefon[]) { //pointer "láncszem"
 
 /*
 ujAllat: paraméterei: string név, faj és dátumtípus az oltásnak, visszaad egy állatot.
-Dinamikusan lefoglalja az új állat méretét, majd a paramétereknek megfelelően létrehozza az új állatot.
+Dinamikusan lefoglalja az új állat területét, majd a paramétereknek megfelelően létrehozza az új állatot.
 a maradék paraméterek nullpointerek
 */
 allat* ujAllat(char nev[], char faj[], datumTipus oltas) {
@@ -39,7 +39,7 @@ allat* ujAllat(char nev[], char faj[], datumTipus oltas) {
 }
 /*
 ujKez: paraméterei: dátumtípus, string leírás, vissza ad egy kezelést.
-Dinamikusan lefoglalja az új kezelés méretét, a paraméterekkel létrehozza az új kezelést és a következőnek a pointerét nullon hagyja.
+Dinamikusan lefoglalja az új kezelés területét, a paraméterekkel létrehozza az új kezelést és a következőnek a pointerét nullon hagyja.
 */
 
 kezeles* ujKez(datumTipus datum, char leiras[]) {
@@ -112,16 +112,17 @@ void freeG(gazdi* mostG) {
  Beolvassa a pontosvesszovel tagolt szovegfajlt, es felepiti a 3 szintu lancolt listat.
  */
 gazdi* fajlBe(char fajlnev[]) {
-	// 1. Fajl megnyitasa olvasasra es NULL ellenorzes
+	//fajl megnyitasa olvasasra es nullcheck
 	FILE* fajl = fopen(fajlnev, "r");
-	char adatsor[256];
-	char adatok[5][50];
 	if (fajl == NULL) {
 		printf("Fajlbeolvasas sikertelen.");
 		return NULL;
 	}
+	char adatsor[256];
+	char adatok[5][50];
 
-	// 2. Segedmutatok:
+
+	// segedmutatok:
 	// elso = teljes lista feje + mostani elemek
 	gazdi* elso = NULL;
 	gazdi* mostG = NULL;
