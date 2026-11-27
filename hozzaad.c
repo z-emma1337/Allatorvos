@@ -62,7 +62,7 @@ void gazdi_hozzaad(gazdi* adatok) {
 		} while (kiv == '\n');
 		switch (kiv) {
 		case '1':
-			gazdi * uj = ujGazdi(nev, telefon);
+			gazdi* uj = ujGazdi(nev, telefon);
 			gazdi* utolso = adatok;
 			while (utolso->kov != NULL) {
 				utolso = utolso->kov;

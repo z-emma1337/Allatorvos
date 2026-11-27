@@ -129,7 +129,7 @@ gazdi* fajlBe(char fajlnev[]) {
 	allat* mostA = NULL;
 	kezeles* mostK = NULL;
 
-	// 3. Soronkenti beolvasas (fgets) es darabolas az adatok[sor][oszlop] matrixba ';' menten
+	//soronkenti beolvasas (fgets) es darabolas az adatok[sor][oszlop] matrixba ';' menten
 	while (fgets(adatsor, 256, fajl)) {
 		int sor = 0;
 		int oszlop = 0;
@@ -147,8 +147,8 @@ gazdi* fajlBe(char fajlnev[]) {
 		}
 		adatok[sor][oszlop] = '\0';
 
-		// 4. Sor tipusanak (elso karakter) eldontese es bekotes a megfelelo lancolt lista vegere:
-		// - 'G': uj gazdi -> ha elso == NULL, o az elso; kulonben LL_Gazdi; mostA lenullazasa!
+		// sor tipusanak eldontese es osszekotes:
+		//G
 		if (adatok[0][0] == 'G') {
 			gazdi* uj = ujGazdi(str_to_nev(adatok[1]), adatok[2]);
 			if (elso == NULL) {
@@ -160,7 +160,7 @@ gazdi* fajlBe(char fajlnev[]) {
 			mostG = uj;
 			mostA = NULL;
 		}
-		// - 'A': uj allat -> aktualis gazdi (mostG->allatok) vegere fuzes; mostK lenullazasa!
+		//A
 		else if (adatok[0][0] == 'A') {
 			allat* uj = ujAllat(adatok[1], adatok[2], str_to_datum(adatok[3]));
 			if (mostG->allatok == NULL) {
@@ -172,7 +172,7 @@ gazdi* fajlBe(char fajlnev[]) {
 			mostA = uj;
 			mostK = NULL;
 		}
-		// - 'K': uj kezeles -> aktualis allat (mostA->kezelesek) vegere fuzes
+		//K
 		else if (adatok[0][0] == 'K') {
 			kezeles* uj = ujKez(str_to_datum(adatok[1]), adatok[2]);
 			if (mostA->kezelesek == NULL) {
